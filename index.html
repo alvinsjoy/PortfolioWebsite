@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #000000;
-  color: rgb(250, 141, 141);
-}
-
-.header h1 {
-  font-size: 40px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Portfolio</title>
 </head>
+
 <body>
+  <header>
+    <nav>
+      <div class="container">
+        <h1>Portfolio</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-<div class="header">
-  <h1>Hi I'm new to html</h1>
-  <p>I made it!</p>
-</div>
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Hello, I'm Alvin Joy</h2>
+      <p>A passionate developer.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
 
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm a passionate developer with expertise in building Discord bots using JavaScript. I also have a strong command over Python and I'm currently expanding my skills in Dart and C. I'm excited to collaborate on innovative projects and contribute to the growth of dynamic communities. Let's connect and bring your ideas to life.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <p>My first discord bot using discord.js</p>
+        <img src="project1.jpg" alt="NaniBot using discord.js">
+        <h3>NaniBot</h3>
+      </div>
+      <!--<div class="project-item">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>-->
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p align="center">
+        <a href="https://twitter.com/_alvinjoy_" target="_blank"><img alt="Twitter" title="Twitter" height="32" width="32" src="https://svgshare.com/i/sp1.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/alvinjoydev" target="_blank"><img alt="LinkedIn" title="LinkedIn" height="32" width="32" src="https://svgshare.com/i/spE.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://instagram.com/_alvinjoy_" target="_blank"><img alt="Instagram" title="Instagram" height="32" width="32" src="https://svgshare.com/i/sph.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://discord.com/users/825382504353234954" target="_blank"><img alt="Discord" title="Discord" height="32" width="32" src="https://svgshare.com/i/soe.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://reddit.com/u/alvinjoy" target="_blank"><img alt="Reddit" title="Reddit" height="32" width="32" src="https://svgshare.com/i/so8.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/AlvinJoyDev" target="_blank"><img alt="GitHub" title="GitHub" height="32" width="32" src="https://svgshare.com/i/t80.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://open.spotify.com/user/lwsg3h1l2wm80gp22bfiv1npi" target="_blank"><img alt="Spotify" title="Spotify" height="32" width="32" src="https://svgshare.com/i/sqF.svg"></a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Alvin Joy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
