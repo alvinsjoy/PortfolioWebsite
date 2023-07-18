@@ -371,7 +371,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #ffffff;
+  background: #4f8affdd;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -379,12 +379,12 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #7fa3ffa1;
+  box-shadow: 0 0 15px #4f8affad;
 }
 
 .home-social-icons:hover {
   color: #4f8aff;
-  box-shadow: 0 0 5px #7fa3ffa1;
+  box-shadow: 0 0 5px #4f8affdd;
   text-shadow: 0 0 2px #7fa3ff;
 }
 
@@ -460,7 +460,7 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px #0070bb !important;
+  box-shadow: 0 4px 5px 3px #4f8aff76 !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -470,7 +470,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px #0070bbbc !important;
+  box-shadow: 0 4px 4px 5px #4080ff !important;
 }
 
 .blog-card {
@@ -555,12 +555,12 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid #5a6dffa2 !important;
+  border: 1.7px solid #4f8aff65 !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px #0404a823 !important;
+  box-shadow: 4px 5px 4px 3px #4f8aff07 !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
 }
@@ -574,7 +574,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid #7382e6e1 !important;
+  border: 2.2px solid #4f8aff !important;
 }
 .tech-icon-images {
   padding: 20px !important;
