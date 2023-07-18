@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { ImPointRight } from "react-icons/im";
+import arrow from "../../Assets/arrow.png";
 
 function AboutCard() {
   return (
@@ -9,25 +10,21 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="blue">Alvin Joy </span>
-            from <span className="blue"> Bhubaneswar, India.</span>
-            <br /> I am a final year student pursuing an Integrated MSc (IMSc)
-            in Maths and Computing at BIT Mesra.
-            <br />
-            Additionally, I am currently employed as a software developer at
-            Juspay.
+            from <span className="blue"> Kerala, India.</span>
+            <br /> I am a <span className="blue"> Computer Science and Engineering</span> Undergrad at Govt. Model Engineering College, Kochi.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+            <img src={arrow} className="img-fluid logo" alt="arrow"/> Playing Games
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+            <img src={arrow} className="img-fluid logo" alt="arrow"/> Watching Movies
             </li>
             <li className="about-activity">
-              <ImPointRight /> Travelling
+            <img src={arrow} className="img-fluid logo" alt="arrow"/> Travelling
             </li>
           </ul>
 
