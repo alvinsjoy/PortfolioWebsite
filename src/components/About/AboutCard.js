@@ -31,10 +31,10 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+          <p style={{ color: "#4f8aff97" }}>
+            "Measuring programming progree by lines of code is like measuring aircraft building progree by weight."{" "}
           </p>
-          <footer className="blockquote-footer">Alvin</footer>
+          <footer className="blockquote-footer">Bill Gates</footer>
         </blockquote>
       </Card.Body>
     </Card>
