@@ -4,6 +4,7 @@ import jsonData from '../data.json';
 import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
 import Type from "../components/Type.jsx";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
