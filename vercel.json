@@ -1,4 +1,6 @@
 {
-    "public": ".next"
+    "builds": [
+      { "src": "next.config.js", "use": "@vercel/next" }
+    ],
+    "public": true
   }
-  
