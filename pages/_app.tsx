@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Meta tags */}
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="I'm Alvin Joy, a JavaScript developer with a love for creating interactive applications. I've worked on Discord bots using discord.js and am now expanding my skills into Flutter and web development. I'm always eager to learn and improve, and I'm excited about the future of technology. Outside of coding, I enjoy exploring new tech and staying connected with the developer community." />
+        <meta name="description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
