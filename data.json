@@ -1,0 +1,33 @@
+{
+    "name": "Alvin Joy",
+    "occupation": "Developer",
+    "bio": "I'm Alvin Joy, a JavaScript developer with a love for creating interactive applications. I've worked on Discord bots using discord.js and am now expanding my skills into Flutter and web development. I'm always eager to learn and improve, and I'm excited about the future of technology. Outside of coding, I enjoy exploring new tech and staying connected with the developer community.",
+    "contacts": {
+      "github": {
+        "link": "https://github.com/alvinsjoy",
+        "username": "@alvinsjoy"
+      },
+      "email": {
+        "link": "mailto:levinhkhang631@gmail.com",
+        "address": "levinhkhang631@gmail.com"
+      },
+      "twitter": {
+        "link": "https://twitter.com/_alvinjoy_",
+        "username": "@_alvinjoy_"
+      },
+      "instagram": {
+        "link": "https://instagram.com/_alvinjoy_",
+        "username": "@_alvinjoy_"
+      },
+      "linkedin": {
+        "link": "https://linkedin.com/in/alvinsjoy",
+        "username": "@alvinsjoy"
+      }
+    },
+    "footer": {
+      "madeByText": "Made by",
+      "author": "Alvin Joy",
+      "fontClass": "font-aquire"
+    }
+  }
+  
