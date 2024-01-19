@@ -4,7 +4,7 @@ import jsonData from '../data.json';
 import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { MdOutlineEmail } from "react-icons/md";
 import Type from "../components/Type.jsx";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+//import CustomCursor from '../components/Cursor'
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,7 +22,6 @@ export default function MyComponent() {
 
   const {
     name,
-    occupation,
     bio,
     contacts: { github, email, twitter, instagram, linkedin },
     footer: { madeByText, author, fontClass },
