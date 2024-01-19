@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-const Analytics = () => (
+const GAnalytics = () => (
   <>
     <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VRB81RLGRT" />
     <Script id="ga-script" strategy="lazyOnload">
@@ -14,4 +14,4 @@ const Analytics = () => (
   </>
 );
 
-export default Analytics;
+export default GAnalytics;

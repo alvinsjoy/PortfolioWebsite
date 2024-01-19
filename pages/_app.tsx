@@ -5,7 +5,8 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Analytics from "../components/Analytics";
+import GAnalytics from "../components/GAnalytics";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -24,8 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
         <link rel="icon" href="/icon.ico" type="image/x-icon" />
       </Head>
-      <Analytics />
+      <GAnalytics />
       <Component {...pageProps} />
+      <Analytics />
       <SpeedInsights />
     </>
   );
