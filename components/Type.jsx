@@ -11,7 +11,7 @@ function Type() {
           "Freelancer",
           "JavaScript Dev",
           "CSE Undergrad",
-          "Frontend Dev",
+          "App Dev",
         ],
         autoStart: true,
         loop: true,
