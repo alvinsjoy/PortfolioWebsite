@@ -73,6 +73,10 @@ background: linear-gradient(90deg, #808080, #000000, #Ffffff);
   left: -8px;
 }
 
+.Typewriter__cursor {
+  font-size: .9em !important;
+  color: #fff !important;
+}
 @keyframes colorTransition {
   0% {
     background-position: 0% 50%;

@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
         <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
-        <link rel="icon" href="/icon.ico" type="image/x-icon" />
+        <link rel="icon" href="/assets/icon.ico" type="image/x-icon" />
       </Head>
       <GAnalytics />
       <Component {...pageProps} />
