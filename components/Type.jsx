@@ -1,6 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
+export default Type;
 function Type() {
   return (
     <Typewriter
@@ -20,5 +21,3 @@ function Type() {
     />
   );
 }
-
-export default Type;
