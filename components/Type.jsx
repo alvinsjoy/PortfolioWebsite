@@ -8,11 +8,12 @@ function Type() {
       options={{
         strings: [
           "Human",
+          "CSE Undergrad",
           "Discord Bot Dev",
           "JavaScript Dev",
           "App Dev",
           "Freelancer",
-          "CSE Undergrad",
+          "Open Source Contributor",
         ],
         autoStart: true,
         loop: true,
