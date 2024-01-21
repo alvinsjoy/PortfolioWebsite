@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import jsonData from '../data.json';
-import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { MdOutlineEmail } from "react-icons/md";
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter, FaGithub, FaRedditAlien } from "react-icons/fa6";
+import { SiGmail   } from "react-icons/si";
 import Type from "../components/Type.jsx";
 //import CustomCursor from '../components/Cursor'
 
@@ -23,7 +24,7 @@ export default function MyComponent() {
   const {
     name,
     bio,
-    contacts: { github, email, twitter, instagram, linkedin },
+    contacts: { github, email, twitter, instagram, reddit, linkedin },
     footer: { madeByText, author, fontClass },
   } = jsonData;
 
@@ -45,29 +46,34 @@ export default function MyComponent() {
       <hr className="border-gray-700 w-full max-w-lg mb-8" />
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
-          <Link href={github.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-            <FaGithub size={24} color="#fff" />
+          <Link href={github.link} target="_blank" rel="noopener noreferrer">
+            <FaGithub size={24} title="GitHub" color="#fff" />
           </Link>
         </li>
 
         <li>
-          <Link href={email.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-            <MdOutlineEmail size={24} color="#fff" />
+          <Link href={email.link} target="_blank" rel="noopener noreferrer">
+            <SiGmail size={24} title="Email" color="#fff" />
           </Link>
         </li>
         <li>
-          <Link href={twitter.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-            <FaTwitter size={24} color="#fff" />
+          <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
+            <FaXTwitter size={24} title="Twitter" color="#fff" />
           </Link>
         </li>
         <li>
-          <Link href={instagram.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-            <FaInstagram size={24} color="#fff" />
+          <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={24} title="Instagram" color="#fff" />
           </Link>
         </li>
         <li>
-          <Link href={linkedin.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-            <FaLinkedin size={24} color="#fff" />
+          <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
+            <FaRedditAlien size={24} title="Reddit" color="#fff" />
+          </Link>
+        </li>
+        <li>
+          <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={24} title="LinkedIn" color="#fff" />
           </Link>
         </li>
       </ul>
