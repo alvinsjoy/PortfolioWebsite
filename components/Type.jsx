@@ -12,8 +12,8 @@ function Type() {
           "Discord Bot Dev",
           "JavaScript Dev",
           "App Dev",
-          "Freelancer",
           "Open Source Contributor",
+          "Freelancer"
         ],
         autoStart: true,
         loop: true,
