@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import jsonData from '../data.json';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter, FaGithub, FaRedditAlien } from "react-icons/fa6";
-import { SiGmail   } from "react-icons/si";
+import { FaXTwitter, FaGithub, FaRedditAlien, FaEnvelope } from "react-icons/fa6";
 import Type from "../components/Type.jsx";
 //import CustomCursor from '../components/Cursor'
 
@@ -53,7 +52,7 @@ export default function MyComponent() {
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
-            <SiGmail size={24} title="Email" color="#fff" />
+            <FaEnvelope size={24} title="Email" color="#fff" />
           </Link>
         </li>
         <li>
