@@ -9,10 +9,10 @@ function Type() {
         strings: [
           "Human",
           "Discord Bot Dev",
-          "Freelancer",
           "JavaScript Dev",
-          "CSE Undergrad",
           "App Dev",
+          "Freelancer",
+          "CSE Undergrad",
         ],
         autoStart: true,
         loop: true,
