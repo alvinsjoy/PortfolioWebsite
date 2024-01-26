@@ -46,33 +46,33 @@ export default function MyComponent() {
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} title="GitHub" color="#fff" />
+            <FaGithub size={24} title={`GitHub: ${github.username}`} color="#fff" />
           </Link>
         </li>
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
-            <FaEnvelope size={24} title="Email" color="#fff" />
+            <FaEnvelope size={24} title={`Email: ${email.username}`} color="#fff" />
           </Link>
         </li>
         <li>
           <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter size={24} title="Twitter" color="#fff" />
+            <FaXTwitter size={24} title={`Twitter: ${twitter.username}`} color="#fff" />
           </Link>
         </li>
         <li>
           <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={24} title="Instagram" color="#fff" />
+            <FaInstagram size={24} title={`Instagram: ${instagram.username}`} color="#fff" />
           </Link>
         </li>
         <li>
           <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
-            <FaRedditAlien size={24} title="Reddit" color="#fff" />
+            <FaRedditAlien size={24} title={`Reddit: ${reddit.username}`} color="#fff" />
           </Link>
         </li>
         <li>
           <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} title="LinkedIn" color="#fff" />
+            <FaLinkedin size={24} title={`LinkedIn: ${linkedin.username}`} color="#fff" />
           </Link>
         </li>
       </ul>
