@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import jsonData from '../data.json';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter, FaGithub, FaRedditAlien, FaEnvelope } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaXTwitter, FaGithub, FaRedditAlien, FaEnvelope } from "react-icons/fa6";
 import Type from "../components/Type.jsx";
 //import CustomCursor from '../components/Cursor'
 
@@ -46,33 +45,33 @@ export default function MyComponent() {
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} title={`GitHub: ${github.username}`} color="#fff" />
+            <FaGithub size={24} title={`GitHub: ${github.username}`} color="#AEB2B6" />
           </Link>
         </li>
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
-            <FaEnvelope size={24} title={`Email: ${email.username}`} color="#fff" />
+            <FaEnvelope size={24} title={`Email: ${email.username}`} color="#AEB2B6" />
           </Link>
         </li>
         <li>
           <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter size={24} title={`Twitter: ${twitter.username}`} color="#fff" />
+            <FaXTwitter size={24} title={`Twitter: ${twitter.username}`} color="#AEB2B6" />
           </Link>
         </li>
         <li>
           <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={24} title={`Instagram: ${instagram.username}`} color="#fff" />
+            <FaInstagram size={24} title={`Instagram: ${instagram.username}`} color="#AEB2B6" />
           </Link>
         </li>
         <li>
           <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
-            <FaRedditAlien size={24} title={`Reddit: ${reddit.username}`} color="#fff" />
+            <FaRedditAlien size={24} title={`Reddit: ${reddit.username}`} color="#AEB2B6" />
           </Link>
         </li>
         <li>
           <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} title={`LinkedIn: ${linkedin.username}`} color="#fff" />
+            <FaLinkedin size={24} title={`LinkedIn: ${linkedin.username}`} color="#AEB2B6" />
           </Link>
         </li>
       </ul>
