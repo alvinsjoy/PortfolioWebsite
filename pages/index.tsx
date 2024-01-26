@@ -107,6 +107,5 @@ export default function MyComponent() {
         }
       `}</style>
     </div>
-  
   );
 }
