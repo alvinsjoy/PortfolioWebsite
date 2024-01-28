@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import jsonData from '../data.json';
 import { FaInstagram, FaLinkedin, FaXTwitter, FaGithub, FaRedditAlien, FaEnvelope } from "react-icons/fa6";
-import Type from "../components/Type.jsx";
-//import CustomCursor from '../components/Cursor'
+import Type from "@/components/Type";
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,6 +26,7 @@ export default function MyComponent() {
   } = jsonData;
 
   return (
+    
     <div
       key="1"
       className={`bg-gradient-to-r from-[#202F3F] via-black to-[#102F2F] text-white min-h-screen flex flex-col justify-center items-center ${
