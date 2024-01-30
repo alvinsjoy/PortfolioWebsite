@@ -24,8 +24,8 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
-      - id: Auto merge PRs
-        name: automerge
+      - id: automerge
+        name: Auto merge PRs
         uses: "pascalgn/automerge-action@v0.16.2"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
