@@ -50,11 +50,17 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="keywords" content="portfolio, alvin joy, skill, javascript, alvin, profile" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Alvin Joy" />
-
+        {/* Twitter */ }
         <meta name="twitter:title" content="Profile | Alvin Joy" />
         <meta name="twitter:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
         <meta name="twitter:image" content="/assets/Website.png" />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* Open Graph (Facebook) */}
+        <meta property="og:url" content="https://alvinjoy.vercel.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Profile | Alvin Joy" />
+        <meta property="og:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
+        <meta property="og:image" content="/assets/Website.png" />
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
