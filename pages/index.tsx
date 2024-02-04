@@ -10,6 +10,8 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import Type from "@/components/Type";
+let date = new Date();
+let year = date.getFullYear();
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,8 +30,7 @@ export default function MyComponent() {
   const {
     name,
     bio,
-    contacts: { github, email, twitter, instagram, reddit, linkedin },
-    footer: { madeByText, author, fontClass },
+    contacts: { github, email, twitter, instagram, reddit, linkedin }
   } = jsonData;
 
   return (
@@ -107,13 +108,10 @@ export default function MyComponent() {
       </ul>
 
       <footer className="w-full text-center p-4 fixed bottom-0">
-        <p className="text-[#AEB2B6] bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text">
-          <span className="text-sm">{madeByText}</span>
-          <br />
+        <p>
           <span
-            className={`${fontClass} bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text`}
-          >
-            {author}
+            className="font-aquire bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text">
+            Copyright ©️ {year} Alvin Joy
           </span>
         </p>
       </footer>
