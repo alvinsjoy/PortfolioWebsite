@@ -1,7 +1,14 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import jsonData from '../data.json';
-import { FaInstagram, FaLinkedin, FaXTwitter, FaGithub, FaRedditAlien, FaEnvelope } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import jsonData from "../data.json";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaXTwitter,
+  FaGithub,
+  FaRedditAlien,
+  FaEnvelope,
+} from "react-icons/fa6";
 import Type from "@/components/Type";
 
 export default function MyComponent() {
@@ -26,18 +33,17 @@ export default function MyComponent() {
   } = jsonData;
 
   return (
-    
     <div
       key="1"
       className={`bg-gradient-to-r from-[#202F3F] via-black to-[#102F2F] text-white min-h-screen flex flex-col justify-center items-center ${
-        isVisible || !animationFinished ? 'visible' : 'hidden'
+        isVisible || !animationFinished ? "visible" : "hidden"
       }`}
     >
       <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
         {name}
       </h1>
       <h2 className="text-4xl font-light mb-4 bg-gradient-to-r from-white via-gray-500 to-gray-900 text-transparent bg-clip-text">
-      <Type />
+        <Type />
       </h2>
       <hr className="border-gray-700 w-full max-w-lg mb-8" />
       <p className="mb-8 text-center max-w-lg text-[#AEB2B6]">{bio}</p>
@@ -45,33 +51,57 @@ export default function MyComponent() {
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
-            <FaGithub size={24} title={`GitHub: ${github.username}`} color="#AEB2B6" />
+            <FaGithub
+              size={24}
+              title={`GitHub: ${github.username}`}
+              color="#AEB2B6"
+            />
           </Link>
         </li>
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
-            <FaEnvelope size={24} title={`Email: ${email.username}`} color="#AEB2B6" />
+            <FaEnvelope
+              size={24}
+              title={`Email: ${email.username}`}
+              color="#AEB2B6"
+            />
           </Link>
         </li>
         <li>
           <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter size={24} title={`Twitter: ${twitter.username}`} color="#AEB2B6" />
+            <FaXTwitter
+              size={24}
+              title={`Twitter: ${twitter.username}`}
+              color="#AEB2B6"
+            />
           </Link>
         </li>
         <li>
           <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={24} title={`Instagram: ${instagram.username}`} color="#AEB2B6" />
+            <FaInstagram
+              size={24}
+              title={`Instagram: ${instagram.username}`}
+              color="#AEB2B6"
+            />
           </Link>
         </li>
         <li>
           <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
-            <FaRedditAlien size={24} title={`Reddit: ${reddit.username}`} color="#AEB2B6" />
+            <FaRedditAlien
+              size={24}
+              title={`Reddit: ${reddit.username}`}
+              color="#AEB2B6"
+            />
           </Link>
         </li>
         <li>
           <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={24} title={`LinkedIn: ${linkedin.username}`} color="#AEB2B6" />
+            <FaLinkedin
+              size={24}
+              title={`LinkedIn: ${linkedin.username}`}
+              color="#AEB2B6"
+            />
           </Link>
         </li>
       </ul>
@@ -80,7 +110,9 @@ export default function MyComponent() {
         <p className="text-[#AEB2B6] bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text">
           <span className="text-sm">{madeByText}</span>
           <br />
-          <span className={`${fontClass} bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text`}>
+          <span
+            className={`${fontClass} bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text`}
+          >
             {author}
           </span>
         </p>

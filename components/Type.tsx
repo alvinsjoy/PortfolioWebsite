@@ -12,7 +12,7 @@ export default function Type() {
           "JavaScript Dev",
           "App Dev",
           "Open Source Contributor",
-          "Freelancer"
+          "Freelancer",
         ],
         autoStart: true,
         loop: true,

@@ -25,26 +25,25 @@ body {
     )
     rgb(var(--background-start-rgb));
   /*cursor: none;*/
-    
 }
 .link-with-underline:hover {
   text-decoration: underline;
 }
 @font-face {
-  font-family: 'Aquire';
-  src: url('/AquireBold-8Ma60.otf') format('opentype');
+  font-family: "Aquire";
+  src: url("/AquireBold-8Ma60.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 .font-aquire {
-  font-family: 'Aquire', sans-serif;
+  font-family: "Aquire", sans-serif;
 }
 .gradient-text {
   font-size: 4rem; /* Equivalent to text-6xl */
   font-weight: bold; /* Equivalent to font-bold */
   margin-bottom: 0.5rem; /* Equivalent to mb-2 */
-background: linear-gradient(90deg, #808080, #000000, #Ffffff);
+  background: linear-gradient(90deg, #808080, #000000, #ffffff);
   background-size: 400% 100%;
   color: transparent;
   -webkit-background-clip: text;
@@ -68,13 +67,13 @@ background: linear-gradient(90deg, #808080, #000000, #Ffffff);
   position: absolute;
   border: 2px solid white;
   border-radius: 50%;
-  opacity: .5;
+  opacity: 0.5;
   top: -8px;
   left: -8px;
 }
 
 .Typewriter__cursor {
-  font-size: .9em !important;
+  font-size: 0.9em !important;
   color: #fff !important;
 }
 @keyframes colorTransition {
