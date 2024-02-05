@@ -53,8 +53,9 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Twitter */ }
         <meta name="twitter:title" content="Profile | Alvin Joy" />
         <meta name="twitter:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
-        <meta name="twitter:image" content="/assets/Screenshot.png" />
+        <meta name="twitter:image:src" content="/assets/Screenshot.png" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@_alvinjoy_" />
         {/* Open Graph (Facebook) */}
         <meta property="og:url" content="https://alvinjoy.vercel.app" />
         <meta property="og:type" content="website" />
