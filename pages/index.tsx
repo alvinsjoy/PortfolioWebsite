@@ -10,8 +10,6 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import Type from "@/components/Type";
-let date = new Date();
-let year = date.getFullYear();
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,7 +34,7 @@ export default function MyComponent() {
   return (
     <div
       key="1"
-      className={`bg-gradient-to-r from-[#202F3F] via-black to-[#102F2F] text-white min-h-screen flex flex-col justify-center items-center ${
+      className={`bg-gradient-to-r from-[#3f203d] via-black to-[#2f2010] text-white min-h-screen flex flex-col justify-center items-center ${
         isVisible || !animationFinished ? "visible" : "hidden"
       }`}
     >
@@ -111,7 +109,7 @@ export default function MyComponent() {
         <p>
           <span
             className="font-aquire bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text">
-            Copyright ©️ {year} Alvin Joy
+            Copyright ©️ {new Date().getFullYear()} Alvin Joy
           </span>
         </p>
       </footer>
