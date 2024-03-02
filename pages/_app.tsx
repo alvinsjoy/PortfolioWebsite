@@ -53,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Twitter */ }
         <meta name="twitter:title" content="Profile | Alvin Joy" />
         <meta name="twitter:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
-        <meta name="twitter:image:src" content="/assets/Mac.jpg" />
+        <meta name="twitter:image:src" content="/assets/Mac.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@_alvinjoy_" />
         {/* Open Graph (Facebook) */}
@@ -61,12 +61,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Profile | Alvin Joy" />
         <meta property="og:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
-        <meta property="og:image" content="/assets/Mac.jpg" />
+        <meta property="og:image" content="/assets/Mac.png" />
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
-        <link rel="shortcut icon" href="/icon.ico" type="image/x-icon" />
-        <link rel="icon" href="/assets/icon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
       </Head>
       <div
         ref={cursorRef}
