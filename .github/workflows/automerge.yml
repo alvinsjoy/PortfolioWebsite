@@ -32,3 +32,10 @@ jobs:
           MERGE_LABELS: "dependencies"
           MERGE_RETRY_SLEEP: "60000"
           MERGE_FILTER_AUTHOR: "dependabot[bot]"
+      - id: lock
+        name: Lock merged PRs
+        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        run: |
+          gh pr lock ${{ steps.automerge.outputs.pullRequestNumber }} --reason "dependabot update done"
+        env:
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
