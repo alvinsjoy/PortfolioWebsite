@@ -1,31 +1,25 @@
-name: Check For PRs
+name: Dependabot auto-merge
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 20 * * 3,6"
-  check_suite:
-    types:
-      - completed
-  pull_request_review:
-    types:
-      - submitted
+  pull_request
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
-  automerge:
-    permissions: write-all
+  dependabot:
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
     steps:
-      - id: automerge
-        name: Auto merge PRs
-        uses: "pascalgn/automerge-action@v0.16.2"
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{steps.dependabot-metadata.outputs.update-type != 'version-update:semver-major'}}
+        run: | 
+          gh pr merge --auto --merge "$PR_URL"
+          gh pr lock "$PR_URL" --reason "dependabot update done"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: "dependencies"
-          MERGE_RETRY_SLEEP: "60000"
-          MERGE_FILTER_AUTHOR: "dependabot[bot]"
-      - id: lock
-        name: Lock merged PRs
-        if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-        run: |
-          gh pr lock ${{ steps.automerge.outputs.pullRequestNumber }} --reason "dependabot update done"
-        env:
-          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
