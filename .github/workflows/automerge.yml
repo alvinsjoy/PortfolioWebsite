@@ -3,13 +3,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 20 * * 3,6"
-  pull_request:
+  check_suite:
     types:
-      - synchronize
-      - opened
-      - ready_for_review
-      - reopened
-      - unlocked
+      - completed
   pull_request_review:
     types:
       - submitted
