@@ -18,7 +18,7 @@ jobs:
         name: Auto merge PRs
         uses: "pascalgn/automerge-action@v0.16.2"
         env:
-          GITHUB_TOKEN: "${{ secrets.GH_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_LABELS: "dependencies"
           MERGE_RETRY_SLEEP: "60000"
           MERGE_FILTER_AUTHOR: "dependabot[bot]"
@@ -28,4 +28,4 @@ jobs:
         run: |
           gh pr lock ${{ steps.automerge.outputs.pullRequestNumber }} --reason "dependabot update done"
         env:
-          GH_TOKEN: "${{ secrets.GH_TOKEN }}"
+          GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
