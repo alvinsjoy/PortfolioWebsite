@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Enable auto-merge for Dependabot PRs
         run: | 
-          gh pr merge --auto --merge "$PR_URL"
-          gh pr lock "$PR_URL" --reason resolved
+          gh pr merge --auto --merge "$PR_NO"
+          gh pr lock "$PR_NO" --reason resolved
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
+          PR_NO: ${{github.event.pull_request.number}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
