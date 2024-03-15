@@ -4,5 +4,6 @@
     "config:recommended"
   ],
   "automerge": true,
-  "rebaseWhen": "conflicted"
+  "rebaseWhen": "conflicted",
+  "labels": ["dependencies"]
 }
