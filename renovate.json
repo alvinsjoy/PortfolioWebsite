@@ -3,6 +3,10 @@
   "extends": [
     "config:recommended"
   ],
+  "timezone": "Asia/Calcutta",
+  "schedule": [
+    "before 1am"
+  ],
   "automerge": true,
   "labels": ["dependencies"]
 }
