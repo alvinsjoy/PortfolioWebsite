@@ -8,6 +8,6 @@
     "before 1am"
   ],
   "automerge": true,
-  "rebaseWhen" : "auto",
+  "rebaseWhen": "auto",
   "labels": ["dependencies"]
 }
