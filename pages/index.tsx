@@ -61,9 +61,11 @@ export default function MyComponent() {
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
-            <FaEnvelope
-              title={`Email: ${email.username}`}
-            />
+            <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
+              <FaEnvelope
+                title={`Email: ${email.username}`}
+              />
+            </IconContext.Provider>
           </Link>
         </li>
         <li>
