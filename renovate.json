@@ -1,13 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended", ":dependencyDashboard"
   ],
   "timezone": "Asia/Calcutta",
   "schedule": [
     "before 1am"
   ],
   "automerge": true,
-  "rebaseWhen": "auto",
+  "rebaseWhen": "behind-base-branch",
   "labels": ["dependencies"]
 }
