@@ -10,6 +10,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import Type from "@/components/Type";
+import { IconContext } from "react-icons/lib";
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,57 +51,55 @@ export default function MyComponent() {
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
-            <FaGithub
-              size={24}
-              title={`GitHub: ${github.username}`}
-              color="#AEB2B6"
-            />
+            <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
+              <FaGithub
+                title={`GitHub: ${github.username}`}
+              />
+            </IconContext.Provider>
           </Link>
         </li>
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
             <FaEnvelope
-              size={24}
               title={`Email: ${email.username}`}
-              color="#AEB2B6"
             />
           </Link>
         </li>
         <li>
           <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter
-              size={24}
-              title={`Twitter: ${twitter.username}`}
-              color="#AEB2B6"
-            />
+            <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
+              <FaXTwitter
+                title={`Twitter: ${twitter.username}`}
+              />
+            </IconContext.Provider>
           </Link>
         </li>
         <li>
           <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
-            <FaInstagram
-              size={24}
-              title={`Instagram: ${instagram.username}`}
-              color="#AEB2B6"
-            />
+            <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
+              <FaInstagram
+                title={`Instagram: ${instagram.username}`}
+              />
+            </IconContext.Provider>
           </Link>
         </li>
         <li>
           <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
-            <FaRedditAlien
-              size={24}
-              title={`Reddit: ${reddit.username}`}
-              color="#AEB2B6"
-            />
+            <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
+              <FaRedditAlien
+                title={`Reddit: ${reddit.username}`}
+              />
+            </IconContext.Provider>
           </Link>
         </li>
         <li>
           <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
-            <FaLinkedin
-              size={24}
-              title={`LinkedIn: ${linkedin.username}`}
-              color="#AEB2B6"
-            />
+            <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
+              <FaLinkedin
+                title={`LinkedIn: ${linkedin.username}`}
+              />
+            </IconContext.Provider>
           </Link>
         </li>
       </ul>
