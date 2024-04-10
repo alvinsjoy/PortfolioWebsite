@@ -19,11 +19,11 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
   /*cursor: none;*/
 }
 .link-with-underline:hover {
@@ -50,26 +50,6 @@ body {
   background-clip: text;
   animation: colorTransition 8s infinite;
   text-align: center; /* Equivalent to text-center */
-}
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 1px solid white;
-  border-radius: 50%;
-  position: absolute;
-  pointer-events: none;
-}
-
-.cursor::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border: 2px solid white;
-  border-radius: 50%;
-  opacity: 0.5;
-  top: -8px;
-  left: -8px;
 }
 
 .Typewriter__cursor {
