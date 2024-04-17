@@ -34,8 +34,7 @@ export default function NotFound() {
       </h2>
       <footer className="w-full text-center p-4 fixed bottom-0">
         <p>
-          <span
-            className="font-aquire bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text">
+          <span className="font-aquire bg-gradient-to-r from-gray-500 via-gray-600 to-white text-transparent bg-clip-text">
             Copyright ©️ {new Date().getFullYear()} Alvin Joy
           </span>
         </p>
