@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import GAnalytics from "@/components/GAnalytics";
 import { Analytics } from "@vercel/analytics/react";
 import gsap from "gsap";
+import { ThemeProvider } from 'next-themes'
 
 export default function App({ Component, pageProps }: AppProps) {
   const cursorRef = React.useRef(null);
@@ -73,7 +74,9 @@ export default function App({ Component, pageProps }: AppProps) {
         className="hidden lg:block w-3 h-3 opacity-0 pointer-events-none rounded-full bg-cursor-blue z-[9999] fixed -translate-x-1/2 -translate-y-1/2"
       />
       <GAnalytics />
+      <ThemeProvider>
       <Component {...pageProps} />
+      </ThemeProvider>
       <Analytics />
       <SpeedInsights />
     </>
