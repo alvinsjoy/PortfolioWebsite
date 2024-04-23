@@ -10,6 +10,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa6";
 import Type from "@/components/Type";
+import Theme from "@/components/Theme";
 import { IconContext } from "react-icons/lib";
 
 export default function MyComponent() {
