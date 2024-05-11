@@ -63,6 +63,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Profile | Alvin Joy" />
         <meta property="og:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
         <meta property="og:image" content="/assets/Mac.png" />
+        {/* Google site verification */ }
+        <meta name="google-site-verification" content="u4he7KeBVBRlAgWdtNKOs7fEjbfC0-9UR-AuCCJlaWc" />
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
