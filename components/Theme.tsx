@@ -1,23 +1,30 @@
-'use client';
-import React from 'react';
-import { useTheme } from 'next-themes';
-import { DarkMode, LightMode } from '@mui/icons-material';
-import { motion } from 'framer-motion';
-export default function ThemeButton(){
-  const ThemeButton = ({ index }: any | null) => {
-    const { systemTheme, theme, setTheme } = useTheme();
-    const currentTheme = theme === 'system' ? systemTheme : theme;
+import { useTheme } from 'next-themes'
+import { BsSun, BsMoon, BsLaptop } from 'react-icons/bs'
+import { motion } from 'framer-motion'
 
-    return (
+export default function Theme() {
+  const { theme, setTheme } = useTheme()
+
+  function handleClick() {
+    if (theme === 'system') {
+      setTheme('dark');
+    } else if (theme === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('system');
+    }
+  }
+
+  return (
       <motion.button
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={index && { duration: 0.3 * index }}
-        onClick={() => (theme == 'dark' ? setTheme('light') : setTheme('dark'))}
-        className="hover:bg-gray-300 dark:hover:bg-gray-700 transition-all rounded flex items-center justify-center h-7 w-7"
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        onClick={handleClick}
       >
-        {currentTheme === 'dark' ? <DarkMode /> : <LightMode />}
-       </motion.button>
-    );
-  };
+        {theme === 'system' && <BsLaptop />}
+        {theme === 'dark' && <BsMoon />}
+        {theme === 'light' && <BsSun />}
+      </motion.button>
+  )
 };
