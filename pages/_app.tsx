@@ -68,7 +68,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
       </Head>
       <div
