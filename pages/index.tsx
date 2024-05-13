@@ -40,9 +40,9 @@ export default function MyComponent() {
         isVisible || !animationFinished ? "visible" : "hidden"
       }`}
     >
-      {/*<div className="absolute top-4 right-4">
+      <div className="absolute top-4 right-4">
         <Theme />
-    </div>*/}
+    </div>
       <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
         {name}
       </h1>

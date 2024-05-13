@@ -1,9 +1,21 @@
+"use client"
+import { useEffect, useState } from "react";
 import { useTheme } from 'next-themes'
 import { BsSun, BsMoon, BsLaptop } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
 export default function Theme() {
+  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   function handleClick() {
     if (theme === 'system') {
