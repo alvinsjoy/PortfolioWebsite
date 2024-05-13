@@ -77,7 +77,7 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <GAnalytics />
       <ThemeProvider>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
       <SpeedInsights />
