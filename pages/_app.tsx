@@ -63,7 +63,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:title" content="Profile | Alvin Joy" />
         <meta property="og:description" content="JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future." />
         <meta property="og:image" content="/assets/Mac.png" />
-        {/* Google site verification */}
+        {/* Google site verification */ }
         <meta name="google-site-verification" content="u4he7KeBVBRlAgWdtNKOs7fEjbfC0-9UR-AuCCJlaWc" />
         {/* Add more meta tags as needed */}
 
@@ -76,7 +76,7 @@ export default function App({ Component, pageProps }: AppProps) {
         className="hidden lg:block w-3 h-3 opacity-0 pointer-events-none rounded-full bg-cursor-blue z-[9999] fixed -translate-x-1/2 -translate-y-1/2"
       />
       <GAnalytics />
-      <ThemeProvider attribute="class">
+      <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
       <Analytics />
