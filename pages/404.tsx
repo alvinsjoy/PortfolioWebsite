@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
-import Button from "@mui/material/Button";
+import Theme from "@/components/Theme";
+import { Button } from "@/components/ui/button"
 
 export default function NotFound() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,12 +25,15 @@ export default function NotFound() {
         isVisible || !animationFinished ? "visible" : "hidden"
       }`}
     >
+      <div className="absolute top-4 right-4">
+        <Theme />
+      </div>
       <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
         404 | Page Not Found
       </h1>
-      <h2 className="text-4xl font-light mb-4 bg-gradient-to-r from-white via-gray-500 to-gray-900 text-transparent bg-clip-text">
-        <Button variant="contained" href="/" startIcon={<FaHome color="#AEB2B6" />} color="secondary">
-          Go Home
+      <h2 >
+        <Button variant="ghost">
+          <Link href="/"> <FaHome/> Home </Link>
         </Button>
       </h2>
       <footer className="w-full text-center p-4 fixed bottom-0">
