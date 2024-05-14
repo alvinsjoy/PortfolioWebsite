@@ -1,21 +1,19 @@
 import {
     FaHtml5 as html,
+    FaCss3Alt as css,
     FaReact as react,
     FaNodeJs as nodejs,
     FaGitAlt as git,
+    FaGithub as github,
     FaPython as python,
     FaJava as java,
     FaMarkdown as markdown
   } from "react-icons/fa";
   import {
-    IoLogoCss3 as css,
-    IoLogoGithub as github,
-  } from "react-icons/io";
-  import { IoLogoJavascript as javascript } from "react-icons/io5";
-  import {
     BiLogoTypescript as typescript
   } from "react-icons/bi";
   import {
+    SiJavascript as javascript,
     SiNextdotjs as nextjs,
     SiTailwindcss as tailwind,
     SiDart as dart,
