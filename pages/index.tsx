@@ -59,7 +59,7 @@ export default function MyComponent() {
             <Button variant="ghost" size="icon" className="relative top-1">
               <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
                 <FaGithub title={`GitHub: ${github.username}`} />
-            </IconContext.Provider>
+              </IconContext.Provider>
             </Button>
           </Link>
         </li>
@@ -69,7 +69,7 @@ export default function MyComponent() {
             <Button variant="ghost" size="icon">
               <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
                 <FaEnvelope title={`Email: ${email.username}`} />
-            </IconContext.Provider>
+              </IconContext.Provider>
             </Button>
           </Link>
         </li>
