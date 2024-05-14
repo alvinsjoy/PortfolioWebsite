@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import jsonData from "../data.json";
+import jsonData from "../public/data.json";
 import {
   FaInstagram,
   FaLinkedin,
