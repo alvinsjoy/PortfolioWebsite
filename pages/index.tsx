@@ -12,6 +12,11 @@ import {
 import Type from "@/components/Type";
 import Theme from "@/components/Theme";
 import { Button } from "@/components/ui/button"
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
 import { IconContext } from "react-icons/lib";
 
 export default function MyComponent() {
@@ -41,6 +46,12 @@ export default function MyComponent() {
         isVisible || !animationFinished ? "visible" : "hidden"
       }`}
     >
+      <Link href="/">
+        <Avatar className="absolute top-4 left-4">
+          <AvatarImage src="https://github.com/alvinsjoy.png" alt="alvinjoy" />
+          <AvatarFallback>AJ</AvatarFallback>
+        </Avatar>
+      </Link>
       <div className="absolute top-4 right-4">
         <Theme />
       </div>
