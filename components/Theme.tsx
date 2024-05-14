@@ -1,8 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { BsSun, BsMoon } from "react-icons/bs";
-import { IoIosDesktop } from "react-icons/io";
+import { Laptop, Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Theme() {
@@ -35,9 +34,9 @@ export default function Theme() {
         whileTap={{ scale: 0.95 }}
         onClick={handleClick}
       >
-        {theme === 'system' && <IoIosDesktop />}
-        {theme === 'dark' && <BsMoon />}
-        {theme === 'light' && <BsSun />}
+        {theme === 'system' && <Laptop />}
+        {theme === 'dark' && <Moon />}
+        {theme === 'light' && <Sun />}
       </motion.button>
   )
 };
