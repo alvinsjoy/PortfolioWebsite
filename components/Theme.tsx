@@ -1,9 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
-import { useTheme } from 'next-themes'
+import { useTheme } from "next-themes";
 import { BsSun, BsMoon } from "react-icons/bs";
 import { IoIosDesktop } from "react-icons/io";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 export default function Theme() {
   const [mounted, setMounted] = useState(false)
