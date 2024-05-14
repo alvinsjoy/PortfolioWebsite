@@ -1,7 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useTheme } from 'next-themes'
-import { BsSun, BsMoon, BsLaptop } from 'react-icons/bs'
+import { BsSun, BsMoon } from "react-icons/bs";
+import { IoIosDesktop } from "react-icons/io";
 import { motion } from 'framer-motion'
 
 export default function Theme() {
@@ -34,7 +35,7 @@ export default function Theme() {
         whileTap={{ scale: 0.95 }}
         onClick={handleClick}
       >
-        {theme === 'system' && <BsLaptop />}
+        {theme === 'system' && <IoIosDesktop />}
         {theme === 'dark' && <BsMoon />}
         {theme === 'light' && <BsSun />}
       </motion.button>
