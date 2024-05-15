@@ -18,6 +18,7 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar";
 import { IconContext } from "react-icons/lib";
+//import Skill from "@/components/skill";
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
