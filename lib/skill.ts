@@ -13,6 +13,9 @@ import {
     BiLogoTypescript as typescript
   } from "react-icons/bi";
   import {
+    BsCSquareFill as c
+  } from "react-icons/bs";
+  import {
     SiJavascript as javascript,
     SiNextdotjs as nextjs,
     SiTailwindcss as tailwind,
@@ -23,6 +26,10 @@ import {
   } from "react-icons/si";
   
   export const logos = [
+    {
+      image: c,
+      name: "C",
+    },
     {
         image: java,
         name: "Java",
