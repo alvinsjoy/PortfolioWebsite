@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import Theme from "@/components/Theme";
+import Theme from "@/components/ThemeSwitcher";
 
 export default function NotFound() {
   const [isVisible, setIsVisible] = useState(false);

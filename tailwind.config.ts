@@ -16,18 +16,8 @@ const config: Config = {
       colors: {
         'cursor-blue': '#00aec2',
       },
-      keyframes: {
-        slide: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-      },
-      animation: {
-        slide: 'slide 10s infinite linear',
-        paused: 'paused 5s infinite linear',
-      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require('tailwindcss-animate')],
 }
 export default config

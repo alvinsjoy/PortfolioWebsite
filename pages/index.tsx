@@ -18,7 +18,7 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar";
 import { IconContext } from "react-icons/lib";
-//import Skill from "@/components/skill";
+//import SkillList from "@/components/Skill";
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,6 +65,12 @@ export default function MyComponent() {
       <hr className="border-gray-700 w-full max-w-lg mb-8" />
       <p className="mb-8 text-center max-w-lg text-[#AEB2B6]">{bio}</p>
       <hr className="border-gray-700 w-full max-w-lg mb-8" />
+      {/*<h4 className="text-4xl font-light mb-4 bg-gradient-to-r from-white via-gray-500 to-gray-900 text-transparent bg-clip-text">
+        Skills
+      </h4>
+      <div className="max-w-lg">
+        <SkillList />
+      </div>*/}
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
