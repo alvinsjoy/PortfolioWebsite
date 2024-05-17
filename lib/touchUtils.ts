@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 export default function useIsTouchSupported() {
   const [isTouchSupported, setIsTouchSupported] = useState(false);
@@ -6,7 +6,7 @@ export default function useIsTouchSupported() {
   useEffect(() => {
     function checkTouchSupport() {
       setIsTouchSupported(window.matchMedia('(pointer: coarse)').matches);
-    };
+    }
 
     checkTouchSupport();
 

@@ -19,25 +19,25 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  )
-  rgb(var(--background-start-rgb));
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   /*cursor: none;*/
 }
 .link-with-underline:hover {
   text-decoration: underline;
 }
 @font-face {
-  font-family: "Aquire";
-  src: url("/AquireBold-8Ma60.otf") format("opentype");
+  font-family: 'Aquire';
+  src: url('/AquireBold-8Ma60.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 .font-aquire {
-  font-family: "Aquire", sans-serif;
+  font-family: 'Aquire', sans-serif;
 }
 .gradient-text {
   font-size: 4rem; /* Equivalent to text-6xl */

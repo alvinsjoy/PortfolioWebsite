@@ -1,31 +1,30 @@
 {
-    "name": "Alvin Joy",
-    "bio": "I'm Alvin Joy, a JavaScript developer with a love for creating interactive applications. I've worked on Discord bots using discord.js and am now expanding my skills into Web and App development. I'm always eager to learn and improve, and I'm excited about the future of technology. Outside of coding, I enjoy exploring new tech and staying connected with the developer community.",
-    "contacts": {
-      "github": {
-        "link": "https://github.com/alvinsjoy",
-        "username": "alvinsjoy"
-      },
-      "email": {
-        "link": "mailto:mdl22cs029@mec.ac.in",
-        "username": "mdl22cs029@mec.ac.in"
-      },
-      "twitter": {
-        "link": "https://x.com/_alvinjoy_",
-        "username": "_alvinjoy_"
-      },
-      "instagram": {
-        "link": "https://instagram.com/_alvinjoy_",
-        "username": "_alvinjoy_"
-      },
-      "reddit": {
-        "link": "https://reddit.com/u/alvinjoy",
-        "username": "alvinjoy"
-      },
-      "linkedin": {
-        "link": "https://linkedin.com/in/alvinsjoy",
-        "username": "alvinsjoy"
-      }
+  "name": "Alvin Joy",
+  "bio": "I'm Alvin Joy, a JavaScript developer with a love for creating interactive applications. I've worked on Discord bots using discord.js and am now expanding my skills into Web and App development. I'm always eager to learn and improve, and I'm excited about the future of technology. Outside of coding, I enjoy exploring new tech and staying connected with the developer community.",
+  "contacts": {
+    "github": {
+      "link": "https://github.com/alvinsjoy",
+      "username": "alvinsjoy"
+    },
+    "email": {
+      "link": "mailto:mdl22cs029@mec.ac.in",
+      "username": "mdl22cs029@mec.ac.in"
+    },
+    "twitter": {
+      "link": "https://x.com/_alvinjoy_",
+      "username": "_alvinjoy_"
+    },
+    "instagram": {
+      "link": "https://instagram.com/_alvinjoy_",
+      "username": "_alvinjoy_"
+    },
+    "reddit": {
+      "link": "https://reddit.com/u/alvinjoy",
+      "username": "alvinjoy"
+    },
+    "linkedin": {
+      "link": "https://linkedin.com/in/alvinsjoy",
+      "username": "alvinsjoy"
     }
   }
-  
+}

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import jsonData from "../public/data.json";
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import jsonData from '../public/data.json';
 import {
   FaInstagram,
   FaLinkedin,
@@ -8,16 +8,12 @@ import {
   FaGithub,
   FaRedditAlien,
   FaEnvelope,
-} from "react-icons/fa6";
-import Type from "@/components/Type";
-import Theme from "@/components/ThemeSwitcher";
-import { Button } from "@/components/ui/button"
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar";
-import { IconContext } from "react-icons/lib";
+} from 'react-icons/fa6';
+import Type from '@/components/Type';
+import Theme from '@/components/ThemeSwitcher';
+import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { IconContext } from 'react-icons/lib';
 //import SkillList from "@/components/Skill";
 
 export default function MyComponent() {
@@ -37,14 +33,14 @@ export default function MyComponent() {
   const {
     name,
     bio,
-    contacts: { github, email, twitter, instagram, reddit, linkedin }
+    contacts: { github, email, twitter, instagram, reddit, linkedin },
   } = jsonData;
 
   return (
     <div
       key="1"
       className={`bg-gradient-to-r from-[#3f203d] via-black to-[#2f2010] text-white min-h-screen flex flex-col justify-center items-center ${
-        isVisible || !animationFinished ? "visible" : "hidden"
+        isVisible || !animationFinished ? 'visible' : 'hidden'
       }`}
     >
       <Link href="/">

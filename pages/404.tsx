@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { FaHome } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
-import Theme from "@/components/ThemeSwitcher";
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { FaHome } from 'react-icons/fa';
+import { Button } from '@/components/ui/button';
+import Theme from '@/components/ThemeSwitcher';
 
 export default function NotFound() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,7 +22,7 @@ export default function NotFound() {
     <div
       key="1"
       className={`bg-gradient-to-r from-[#3f203d] via-black to-[#2f2010] text-white min-h-screen flex flex-col justify-center items-center ${
-        isVisible || !animationFinished ? "visible" : "hidden"
+        isVisible || !animationFinished ? 'visible' : 'hidden'
       }`}
     >
       <div className="absolute top-4 right-4">
@@ -33,7 +33,10 @@ export default function NotFound() {
       </h1>
       <div className="mb-8 text-center max-w-lg text-[#AEB2B6]">
         <Link href="/">
-          <Button variant="outline"><FaHome color="#AEB2B6" />&nbsp;Go Home</Button>
+          <Button variant="outline">
+            <FaHome color="#AEB2B6" />
+            &nbsp;Go Home
+          </Button>
         </Link>
       </div>
       <footer className="w-full text-center p-4 fixed bottom-0">
