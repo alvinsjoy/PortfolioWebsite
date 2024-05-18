@@ -51,7 +51,7 @@ export default function MyComponent() {
         <Type />
       </h2>
       <hr className="border-gray-900 dark:border-gray-700 w-full max-w-lg mb-8" />
-      <p className="mb-8 text-center max-w-lg text-[#040404] dark:text-[#AEB2B6]">
+      <p className="mb-8 text-center max-w-lg text-[#111111] dark:text-[#AEB2B6]">
         {bio}
       </p>
       <hr className="border-gray-900 dark:border-gray-700 w-full max-w-lg mb-8" />

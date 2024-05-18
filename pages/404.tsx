@@ -21,7 +21,7 @@ export default function NotFound() {
   return (
     <div
       key="1"
-      className={`bg-gradient-to-r from-[#3f203d] via-black to-[#2f2010] text-white min-h-screen flex flex-col justify-center items-center ${
+      className={`bg-gradient-to-r from-[#d066c9] via-gray-200 to-[#bf8343] text-black dark:from-[#3f203d] dark:via-black dark:to-[#2f2010] dark:text-white min-h-screen flex flex-col justify-center items-center ${
         isVisible || !animationFinished ? 'visible' : 'hidden'
       }`}
     >
@@ -29,7 +29,7 @@ export default function NotFound() {
       <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
         404 | Page Not Found
       </h1>
-      <div className="mb-8 text-center max-w-lg text-[#AEB2B6]">
+      <div className="mb-8 text-center max-w-lg text-[#111111] dark:text-[#AEB2B6]">
         <Link href="/">
           <Button variant="outline">
             <FaHome color="#AEB2B6" />
