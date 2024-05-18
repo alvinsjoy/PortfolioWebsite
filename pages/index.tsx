@@ -12,8 +12,8 @@ import {
 import Type from '@/components/Type';
 import Theme from '@/components/ThemeSwitcher';
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { IconContext } from 'react-icons/lib';
+import Navbar from '@/components/Navbar';
 //import SkillList from "@/components/Skill";
 
 export default function MyComponent() {
@@ -43,15 +43,7 @@ export default function MyComponent() {
         isVisible || !animationFinished ? 'visible' : 'hidden'
       }`}
     >
-      <Link href="/">
-        <Avatar className="absolute top-4 left-4">
-          <AvatarImage src="https://github.com/alvinsjoy.png" alt="alvinjoy" />
-          <AvatarFallback>AJ</AvatarFallback>
-        </Avatar>
-      </Link>
-      <div className="absolute top-4 right-4">
-        <Theme />
-      </div>
+      <Navbar />
       <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
         {name}
       </h1>

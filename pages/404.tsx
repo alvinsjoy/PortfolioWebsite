@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FaHome } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
-import Theme from '@/components/ThemeSwitcher';
+import Navbar from '@/components/Navbar';
 
 export default function NotFound() {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,9 +25,7 @@ export default function NotFound() {
         isVisible || !animationFinished ? 'visible' : 'hidden'
       }`}
     >
-      <div className="absolute top-4 right-4">
-        <Theme />
-      </div>
+      <Navbar />
       <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
         404 | Page Not Found
       </h1>
