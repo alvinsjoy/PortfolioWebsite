@@ -14,7 +14,7 @@ import Theme from '@/components/ThemeSwitcher';
 import { Button } from '@/components/ui/button';
 import { IconContext } from 'react-icons/lib';
 import Navbar from '@/components/Navbar';
-//import SkillList from "@/components/Skill";
+//import Marquee from '@/components/Skill';
 
 export default function MyComponent() {
   const [isVisible, setIsVisible] = useState(false);
@@ -65,9 +65,10 @@ export default function MyComponent() {
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon" className="relative top-1">
-              <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
-                <FaGithub title={`GitHub: ${github.username}`} />
-              </IconContext.Provider>
+              <FaGithub
+                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                title={`GitHub: ${github.username}`}
+              />
             </Button>
           </Link>
         </li>
@@ -75,45 +76,50 @@ export default function MyComponent() {
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon">
-              <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
-                <FaEnvelope title={`Email: ${email.username}`} />
-              </IconContext.Provider>
+              <FaEnvelope
+                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                title={`Email: ${email.username}`}
+              />
             </Button>
           </Link>
         </li>
         <li>
           <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon">
-              <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
-                <FaXTwitter title={`Twitter: ${twitter.username}`} />
-              </IconContext.Provider>
+              <FaXTwitter
+                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                title={`Twitter: ${twitter.username}`}
+              />
             </Button>
           </Link>
         </li>
         <li>
           <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon">
-              <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
-                <FaInstagram title={`Instagram: ${instagram.username}`} />
-              </IconContext.Provider>
+              <FaInstagram
+                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                title={`Instagram: ${instagram.username}`}
+              />
             </Button>
           </Link>
         </li>
         <li>
           <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon">
-              <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
-                <FaRedditAlien title={`Reddit: ${reddit.username}`} />
-              </IconContext.Provider>
+              <FaRedditAlien
+                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                title={`Reddit: ${reddit.username}`}
+              />
             </Button>
           </Link>
         </li>
         <li>
           <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
             <Button variant="ghost" size="icon">
-              <IconContext.Provider value={{ color: '#AEB2B6', size: '24px' }}>
-                <FaLinkedin title={`LinkedIn: ${linkedin.username}`} />
-              </IconContext.Provider>
+              <FaLinkedin
+                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                title={`LinkedIn: ${linkedin.username}`}
+              />
             </Button>
           </Link>
         </li>
