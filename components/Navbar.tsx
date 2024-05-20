@@ -2,6 +2,7 @@ import { AvatarImage, AvatarFallback, Avatar } from '@/components/ui/avatar';
 import Link from 'next/link';
 import jsonData from '../public/data.json';
 import Theme from '@/components/ThemeSwitcher';
+import { Separator } from '@/components/ui/separator';
 
 const {
   contacts: { github },
@@ -40,6 +41,7 @@ export default function Navbar() {
           >
             Contact
           </Link>
+          <Separator className="h-5 w-px bg-gray-600 dark:bg-gray-400" />
           <Theme />
         </nav>
       </div>
