@@ -22,26 +22,26 @@ export default function Navbar() {
         </Link>
         <nav className="flex items-center space-x-4">
           <Link
-            className="text-sm font-medium text-gray-900 dark:text-gray-50 hover:text-gray-800 dark:hover:text-gray-200 hover:underline"
+            className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-sm font-medium text-gray-900 dark:text-gray-50 hover:text-gray-800 dark:hover:text-gray-200 hover:underline"
+            className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
             href="#"
           >
             About
           </Link>
           <Link
-            className="text-sm font-medium text-gray-900 dark:text-gray-50 hover:text-gray-800 dark:hover:text-gray-200 hover:underline"
+            className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
             href={github.link}
             target="_blank"
             rel="noopener noreferrer"
           >
             Contact
           </Link>
-          <Separator className="h-5 w-px bg-gray-600 dark:bg-gray-400" />
+          <Separator className="h-5 w-px bg-gray-500 dark:bg-gray-500" />
           <Theme />
         </nav>
       </div>
