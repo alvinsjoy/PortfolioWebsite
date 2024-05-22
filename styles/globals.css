@@ -41,7 +41,7 @@ body {
   font-size: 4rem; /* Equivalent to text-6xl */
   font-weight: bold; /* Equivalent to font-bold */
   margin-bottom: 0.5rem; /* Equivalent to mb-2 */
-  background: linear-gradient(90deg, #808080, #000000, #ffffff);
+  background: linear-gradient(90deg, #7f3ab4, #18d08d, #3752cb);
   background-size: 400% 100%;
   color: transparent;
   -webkit-background-clip: text;
