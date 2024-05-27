@@ -31,8 +31,6 @@ export default function Theme() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel>Theme</DropdownMenuLabel>
-        <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => setTheme('light')}>
           <SunIcon className="mr-2 h-4 w-4" /> Light
         </DropdownMenuItem>
