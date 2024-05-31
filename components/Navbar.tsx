@@ -20,7 +20,7 @@ export default function Navbar() {
             <AvatarFallback>AJ</AvatarFallback>
           </Avatar>
         </Link>
-        <nav className="flex items-center space-x-4">
+        <nav className="flex items-center gap-4">
           <Link
             className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
             href="/"
