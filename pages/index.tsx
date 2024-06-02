@@ -51,9 +51,7 @@ export default function MyComponent() {
         <Type />
       </h2>
       <hr className="border-gray-900 dark:border-gray-600 w-full max-w-lg mb-8" />
-      <p className="mb-8 text-center max-w-lg text-[#111111] dark:text-[#AEB2B6]">
-        {bio}
-      </p>
+      <p className="mb-8 text-center max-w-lg">{bio}</p>
       <hr className="border-gray-900 dark:border-gray-600 w-full max-w-lg mb-8" />
       {/*<h4 className="text-4xl font-light mb-4 bg-gradient-to-r from-white via-gray-500 to-gray-900 text-transparent bg-clip-text">
         Skills
@@ -64,9 +62,13 @@ export default function MyComponent() {
       <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon" className="relative top-1">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative top-1 text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            >
               <FaGithub
-                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                className="w-8 h-8 sm:w-6 sm:h-6"
                 title={`GitHub: ${github.username}`}
               />
             </Button>
@@ -75,9 +77,13 @@ export default function MyComponent() {
 
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            >
               <FaEnvelope
-                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                className="w-8 h-8 sm:w-6 sm:h-6"
                 title={`Email: ${email.username}`}
               />
             </Button>
@@ -85,9 +91,13 @@ export default function MyComponent() {
         </li>
         <li>
           <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            >
               <FaXTwitter
-                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                className="w-8 h-8 sm:w-6 sm:h-6"
                 title={`Twitter: ${twitter.username}`}
               />
             </Button>
@@ -95,9 +105,13 @@ export default function MyComponent() {
         </li>
         <li>
           <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            >
               <FaInstagram
-                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                className="w-8 h-8 sm:w-6 sm:h-6"
                 title={`Instagram: ${instagram.username}`}
               />
             </Button>
@@ -105,9 +119,13 @@ export default function MyComponent() {
         </li>
         <li>
           <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            >
               <FaRedditAlien
-                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
+                className="w-8 h-8 sm:w-6 sm:h-6"
                 title={`Reddit: ${reddit.username}`}
               />
             </Button>
@@ -115,10 +133,14 @@ export default function MyComponent() {
         </li>
         <li>
           <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
-            <Button variant="ghost" size="icon">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            >
               <FaLinkedin
-                className="w-8 h-8 sm:w-6 sm:h-6 text-[#111111] dark:text-[#AEB2B6]"
                 title={`LinkedIn: ${linkedin.username}`}
+                className="w-8 h-8 sm:w-6 sm:h-6"
               />
             </Button>
           </Link>
