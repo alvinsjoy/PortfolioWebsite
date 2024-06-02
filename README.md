@@ -1,6 +1,7 @@
 <p align="center">
     <a href="https://alvinjoy.vercel.app">
-        <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alvinsjoy/PortfolioWebsite?style=for-the-badge&logo=nextdotjs&labelColor=%23000000&color=%2396004e">
+        <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alvinsjoy/PortfolioWebsite?style=for-the-badge&logo=nextdotjs&labelColor=%23000000&color=%2396004e">&nbsp;
+        <img alt="GitHub repo size" src="https://wakatime.com/badge/user/7725bb97-20d7-4c95-9c91-bda3fafd52d8/project/e94aa0f5-cf82-411a-85b0-dd0716b6696c.svg?style=for-the-badge&logo=nextdotjs&labelColor=%23000000&color=%2396004e">
     </a>
 </p>
 
