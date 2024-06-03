@@ -26,7 +26,7 @@ export default function NotFound() {
       }`}
     >
       <Navbar />
-      <h1 className="text-6xl font-bold mb-2 gradient-text text-transparent bg-clip-text text-center">
+      <h1 className="gradient-text text-transparent bg-clip-text text-center">
         404 | Page Not Found
       </h1>
       <div className="mb-8 text-center max-w-lg text-[#111111] dark:text-[#AEB2B6]">

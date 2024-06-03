@@ -47,7 +47,7 @@ export default function MyComponent() {
       <h1 className="gradient-text text-transparent bg-clip-text text-center">
         {name}
       </h1>
-      <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-300 dark:from-gray-100 dark:via-gray-400 dark:to-gray-700 text-transparent bg-clip-text">
+      <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-300 dark:from-gray-100 dark:via-gray-400 dark:to-gray-700 text-transparent bg-clip-text text-center">
         <Type />
       </h2>
       <hr className="border-gray-900 dark:border-gray-600 w-full max-w-lg mb-8" />
@@ -59,13 +59,13 @@ export default function MyComponent() {
       <div className="max-w-lg">
         <SkillList />
       </div>*/}
-      <ul className="list-none space-y-2 text-center flex justify-center space-x-4 items-center">
+      <ul className="text-center flex justify-center gap-4 items-center">
         <li>
           <Link href={github.link} target="_blank" rel="noopener noreferrer">
             <Button
               variant="ghost"
               size="icon"
-              className="relative top-1 text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
             >
               <FaGithub
                 className="w-8 h-8 sm:w-6 sm:h-6"
@@ -74,7 +74,6 @@ export default function MyComponent() {
             </Button>
           </Link>
         </li>
-
         <li>
           <Link href={email.link} target="_blank" rel="noopener noreferrer">
             <Button
