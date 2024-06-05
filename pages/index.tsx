@@ -51,7 +51,9 @@ export default function MyComponent() {
         <Type />
       </h2>
       <hr className="border-gray-900 dark:border-gray-600 w-full max-w-lg mb-8" />
-      <p className="mb-8 text-center max-w-lg">{bio}</p>
+      <p className="mb-8 text-center max-w-lg text-[#111111] dark:text-[#AEB2B6]">
+        {bio}
+      </p>
       <hr className="border-gray-900 dark:border-gray-600 w-full max-w-lg mb-8" />
       {/*<h4 className="text-4xl font-light mb-4 bg-gradient-to-r from-white via-gray-500 to-gray-900 text-transparent bg-clip-text">
         Skills
