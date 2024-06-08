@@ -1,5 +1,5 @@
 name: auto-lock renovate prs
-on: 
+on:
   pull_request:
     types:
       - closed
@@ -10,7 +10,7 @@ permissions:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    if: github.actor == 'renovate[bot]' && github.event.pull_request.merged == true
+    if: github.actor == 'renovate[bot]'
     steps:
       - name: Lock prs
         run: gh pr lock "$PR_URL" --reason resolved
