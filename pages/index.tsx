@@ -10,9 +10,7 @@ import {
   FaEnvelope,
 } from 'react-icons/fa6';
 import Type from '@/components/Type';
-import Theme from '@/components/ThemeSwitcher';
 import { Button } from '@/components/ui/button';
-import { IconContext } from 'react-icons/lib';
 import Navbar from '@/components/Navbar';
 //import Marquee from '@/components/Skill';
 
