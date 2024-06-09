@@ -88,7 +88,7 @@
 
 .Typewriter__cursor {
   font-size: 0.9em !important;
-  color: rgb(var(--secondary-foreground)) !important;
+  color: hsl(var(--muted-foreground)) !important;
 }
 @keyframes colorTransition {
   0% {
