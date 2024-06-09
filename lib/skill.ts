@@ -51,12 +51,12 @@ export const logos = [
     name: 'Javascript',
   },
   {
-    image: nodejs,
-    name: 'Node.js',
-  },
-  {
     image: typescript,
     name: 'Typescript',
+  },
+  {
+    image: nodejs,
+    name: 'Node.js',
   },
   {
     image: react,
