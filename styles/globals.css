@@ -47,9 +47,6 @@
     --input: 240 3.7% 15.9%;
     --ring: 346.8 77.2% 49.8%;
   }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
@@ -91,7 +88,7 @@
 
 .Typewriter__cursor {
   font-size: 0.9em !important;
-  color: #fff !important;
+  color: rgb(var(--secondary-foreground)) !important;
 }
 @keyframes colorTransition {
   0% {
