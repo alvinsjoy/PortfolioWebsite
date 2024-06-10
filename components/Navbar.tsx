@@ -22,19 +22,19 @@ export default function Navbar() {
         </Link>
         <nav className="flex items-center gap-4">
           <Link
-            className="text-sm font-medium text-muted-foreground hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-sm font-medium text-muted-foreground hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground"
             href="#"
           >
             About
           </Link>
           <Link
-            className="text-sm font-medium text-muted-foreground hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground"
             href={github.link}
             target="_blank"
             rel="noopener noreferrer"
