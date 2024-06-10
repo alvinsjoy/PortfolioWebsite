@@ -21,7 +21,7 @@ export default function Theme() {
         <Button
           variant="ghost"
           size="icon"
-          className=" text-muted-foreground hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+          className=" text-muted-foreground hover:text-foreground dark:hover:text-foreground"
         >
           <SunIcon className="h-[1.2rem] w-[1.2rem] scale-100 dark:scale-0" />
           <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] scale-0 dark:scale-100" />
