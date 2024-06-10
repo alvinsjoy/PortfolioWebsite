@@ -65,7 +65,7 @@ export default function MyComponent() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
             >
               <FaGithub
                 className="w-8 h-8 sm:w-6 sm:h-6"
@@ -79,7 +79,7 @@ export default function MyComponent() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
             >
               <FaEnvelope
                 className="w-8 h-8 sm:w-6 sm:h-6"
@@ -93,7 +93,7 @@ export default function MyComponent() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
             >
               <FaXTwitter
                 className="w-8 h-8 sm:w-6 sm:h-6"
@@ -107,7 +107,7 @@ export default function MyComponent() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
             >
               <FaInstagram
                 className="w-8 h-8 sm:w-6 sm:h-6"
@@ -121,7 +121,7 @@ export default function MyComponent() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
             >
               <FaRedditAlien
                 className="w-8 h-8 sm:w-6 sm:h-6"
@@ -135,7 +135,7 @@ export default function MyComponent() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-[#111111] dark:text-[#AEB2B6] hover:text-[#EE4B2B] dark:hover:text-[#FFEA00]"
+              className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
             >
               <FaLinkedin
                 title={`LinkedIn: ${linkedin.username}`}
