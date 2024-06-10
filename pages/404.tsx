@@ -29,14 +29,15 @@ export default function NotFound() {
       <h1 className="gradient-text text-transparent bg-clip-text text-center">
         404 | Page Not Found
       </h1>
-      <div className="mb-8 text-center max-w-lg text-[#111111] dark:text-[#AEB2B6]">
-        <Link href="/">
-          <Button variant="outline">
-            <FaHome className="text-[#111111] dark:text-[#AEB2B6]" />
-            &nbsp;Go Home
-          </Button>
-        </Link>
-      </div>
+      <Link href="/">
+        <Button
+          variant="outline"
+          className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
+        >
+          <FaHome />
+          &nbsp;Go Home
+        </Button>
+      </Link>
       <footer className="w-full text-center p-4 fixed bottom-0">
         <p>
           <span className="font-aquire bg-gradient-to-r from-gray-500 via-gray-400 to-black dark:from-gray-500 dark:via-gray-600 dark:to-white text-transparent bg-clip-text">
