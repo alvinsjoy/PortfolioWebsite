@@ -77,6 +77,8 @@ export default function App({ Component, pageProps }: AppProps) {
           name="google-site-verification"
           content="u4he7KeBVBRlAgWdtNKOs7fEjbfC0-9UR-AuCCJlaWc"
         />
+        {/* Mastodon verification */}
+        <link rel="me" href="https://mastodon.social/@alvinjoy" />
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
