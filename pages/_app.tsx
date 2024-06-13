@@ -78,7 +78,11 @@ export default function App({ Component, pageProps }: AppProps) {
           content="u4he7KeBVBRlAgWdtNKOs7fEjbfC0-9UR-AuCCJlaWc"
         />
         {/* Mastodon verification */}
-        <a rel="me" href="https://mastodon.social/@alvinjoy">
+        <a
+          rel="me"
+          href="https://mastodon.social/@alvinjoy"
+          className="sr-only"
+        >
           Mastodon
         </a>
         {/* Add more meta tags as needed */}
