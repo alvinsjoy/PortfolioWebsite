@@ -1,9 +1,9 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import React from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import GAnalytics from '@/components/GAnalytics';
 import { Analytics } from '@vercel/analytics/react';
 import gsap from 'gsap';
 import Provider from '@/components/Provider';
@@ -89,11 +89,16 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
       </Head>
+      {/* Umami Analytics */}
+      <Script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="715dc1b3-3a39-44c9-b7c8-f2fc63dc8ae7"
+      ></Script>
       <div
         ref={cursorRef}
         className="hidden lg:block w-3 h-3 opacity-0 pointer-events-none rounded-full bg-cursor-blue z-[9999] fixed -translate-x-1/2 -translate-y-1/2"
       />
-      <GAnalytics />
       <Provider>
         <Component {...pageProps} />
       </Provider>
