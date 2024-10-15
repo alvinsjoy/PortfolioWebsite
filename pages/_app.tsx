@@ -5,36 +5,9 @@ import Script from 'next/script';
 import React from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import gsap from 'gsap';
 import Provider from '@/components/Provider';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const cursorRef = React.useRef(null);
-
-  React.useEffect(() => {
-    document.addEventListener('mousemove', (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-      gsap.to(cursorRef.current, {
-        x: mouseX,
-        y: mouseY,
-        opacity: 1,
-        delay: 0,
-      });
-    });
-
-    const hideCursor = () => {
-      gsap.to(cursorRef.current, { opacity: 0 });
-    };
-
-    const showCursor = () => {
-      gsap.to(cursorRef.current, { opacity: 1 });
-    };
-
-    document.addEventListener('mouseleave', hideCursor);
-    document.addEventListener('mousedown', hideCursor);
-    document.addEventListener('mouseup', showCursor);
-  }, []);
   return (
     <>
       <Head>
@@ -95,10 +68,7 @@ export default function App({ Component, pageProps }: AppProps) {
         src="https://cloud.umami.is/script.js"
         data-website-id="715dc1b3-3a39-44c9-b7c8-f2fc63dc8ae7"
       ></Script>
-      <div
-        ref={cursorRef}
-        className="hidden lg:block w-3 h-3 opacity-0 pointer-events-none rounded-full bg-cursor-blue z-[9999] fixed -translate-x-1/2 -translate-y-1/2"
-      />
+      <Script src="/oneko.js" strategy="afterInteractive"></Script>
       <Provider>
         <Component {...pageProps} />
       </Provider>
