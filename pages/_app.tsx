@@ -52,6 +52,8 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         {/* Mastodon verification */}
         <link rel="me" href="https://mastodon.social/@alvinjoy" />
+        {/* Canonical url */}
+        <link rel="canonical" href={window.location.origin} />
         {/* Add more meta tags as needed */}
 
         {/* Favicon (example assuming you have a favicon.ico file in public directory) */}
