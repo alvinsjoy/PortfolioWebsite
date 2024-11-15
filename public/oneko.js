@@ -5,7 +5,8 @@
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
     window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
-  if (isReducedMotion) return;
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  if (isReducedMotion || isMobile) return;
 
   const nekoEl = document.createElement('div');
 
