@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { SocialLinks } from '@/components/social-links';
-import { TypeWriter } from '@/components/type-writer';
-import { Footer } from '@/components/footer';
+import SocialLinks from '@/components/social-links';
+import TypeWriter from '@/components/type-writer';
+import Footer from '@/components/footer';
 import jsonData from '@/data/profile.json';
 
 export default function HomePage() {

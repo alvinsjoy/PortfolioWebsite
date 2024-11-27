@@ -2,7 +2,7 @@
 
 import Typewriter from 'typewriter-effect';
 
-export function TypeWriter() {
+export default function TypeWriter() {
   return (
     <Typewriter
       options={{

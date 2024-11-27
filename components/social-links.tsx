@@ -16,7 +16,7 @@ const {
   contacts: { github, email, twitter, instagram, reddit, linkedin },
 } = jsonData;
 
-export function SocialLinks() {
+export default function SocialLinks() {
   return (
     <ul className="text-center flex justify-center gap-4 items-center">
       <li>
