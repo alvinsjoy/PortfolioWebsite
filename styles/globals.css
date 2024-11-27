@@ -59,7 +59,6 @@
         rgb(var(--background-end-rgb))
       )
       rgb(var(--background-start-rgb));
-    /*cursor: none;*/
   }
 }
 
@@ -73,10 +72,11 @@
 .font-aquire {
   font-family: 'Aquire', sans-serif;
 }
+
 .gradient-text {
-  font-size: 4rem; /* Equivalent to text-6xl */
-  font-weight: bold; /* Equivalent to font-bold */
-  margin-bottom: 0.5rem; /* Equivalent to mb-2 */
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
   background: linear-gradient(
     90deg,
     hsl(274, 51%, 47%),
@@ -88,12 +88,29 @@
   -webkit-background-clip: text;
   background-clip: text;
   animation: colorTransition 8s infinite;
-  text-align: center; /* Equivalent to text-center */
+  text-align: center;
 }
 
 .Typewriter__cursor {
   font-size: 0.9em !important;
   color: hsl(var(--muted-foreground)) !important;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.visible {
+  animation: fadeIn 1s ease-in-out;
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }
 @keyframes colorTransition {
   0% {

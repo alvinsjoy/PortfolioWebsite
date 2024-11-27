@@ -2,10 +2,9 @@
 
 import { RxMoon, RxSun } from 'react-icons/rx';
 import { useTheme } from 'next-themes';
-
 import { Button } from '@/components/ui/button';
 
-export default function Theme() {
+export function ThemeSwitcher() {
   const { setTheme, resolvedTheme } = useTheme();
 
   return (
