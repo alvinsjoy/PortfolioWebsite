@@ -2,13 +2,8 @@
 
 import { AvatarImage, AvatarFallback, Avatar } from '@/components/ui/avatar';
 import Link from 'next/link';
-import jsonData from '@/data/profile.json';
 import ThemeSwitcher from '@/components/theme-switcher';
 import { Separator } from '@/components/ui/separator';
-
-const {
-  contacts: { github },
-} = jsonData;
 
 export default function Navbar() {
   return (
@@ -38,11 +33,11 @@ export default function Navbar() {
           </Link>
           <Link
             className="text-sm font-medium text-muted-foreground hover:text-foreground"
-            href={github.link}
+            href="https://aj.is-a.dev"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact
+            Links
           </Link>
           <Separator className="h-5 w-px bg-muted-foreground" />
           <ThemeSwitcher />
