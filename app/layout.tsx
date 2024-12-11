@@ -60,7 +60,7 @@ export default function RootLayout({
         <link rel="me" href="https://mastodon.social/@alvinjoy" />
         <script
           defer
-          src="https://cloud.umami.is/script.js"
+          src="/analytics.js"
           data-website-id="715dc1b3-3a39-44c9-b7c8-f2fc63dc8ae7"
         />
         <script defer src="/oneko.js" />
