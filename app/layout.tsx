@@ -6,6 +6,7 @@ import Navbar from '@/components/nav';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://alvin.is-a.dev'),
   title: 'Profile | Alvin Joy',
   description:
     "JavaScript developer creating interactive apps, skilled in discord.js and exploring Flutter and web development. Eager learner, excited about tech's future.",
