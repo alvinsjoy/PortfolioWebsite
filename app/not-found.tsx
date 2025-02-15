@@ -20,7 +20,7 @@ export default function NotFound() {
 
   return (
     <div
-      className={`bg-gradient-to-r from-[#d066c9] via-gray-200 to-[#bf8343] text-black dark:from-[#3f203d] dark:via-black dark:to-[#2f2010] dark:text-white min-h-screen flex flex-col justify-center items-center ${
+      className={`bg-linear-to-r from-[#d066c9] via-gray-200 to-[#bf8343] text-black dark:from-[#3f203d] dark:via-black dark:to-[#2f2010] dark:text-white min-h-screen flex flex-col justify-center items-center ${
         isVisible || !animationFinished ? 'visible' : 'hidden'
       }`}
     >
