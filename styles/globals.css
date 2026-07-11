@@ -3,13 +3,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(
-    from 180deg at 50% 50%,
-    var(--tw-gradient-stops)
-  );
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
 
-  --color-cursor-blue: #00aec2;
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
@@ -41,150 +38,202 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+  --animate-marquee-reverse: marquee-reverse var(--marquee-duration, 40s)
+    linear infinite;
 
-  @keyframes accordion-down {
+  @keyframes marquee {
     from {
-      height: 0;
+      transform: translateX(0);
     }
     to {
-      height: var(--radix-accordion-content-height);
+      transform: translateX(calc(-50% - var(--marquee-gap, 1rem) / 2));
     }
   }
-  @keyframes accordion-up {
+  @keyframes marquee-reverse {
     from {
-      height: var(--radix-accordion-content-height);
+      transform: translateX(calc(-50% - var(--marquee-gap, 1rem) / 2));
     }
     to {
-      height: 0;
+      transform: translateX(0);
     }
   }
 }
 
 @utility container {
   margin-inline: auto;
-  padding-inline: 2rem;
-  @media (width >= --theme(--breakpoint-sm)) {
-    max-width: none;
-  }
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
+  padding-inline: 1.5rem;
+  max-width: 72rem;
 }
 
 /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+  Color tokens are chosen against WCAG 2.1 AA:
+  - foreground on background        ≥ 15:1
+  - muted-foreground on background  ≥ 5:1
+  - primary (as text) on background ≥ 4.5:1
+  Ambient/aurora layers stay at low alpha so they never push
+  any text below those ratios.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
-@layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 10 85% 55%;
+    --background: 40 20% 97.5%;
+    --foreground: 220 15% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 220 15% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 220 15% 10%;
+    --primary: 174 85% 24%;
+    --primary-foreground: 170 60% 97%;
+    --secondary: 200 12% 92%;
+    --secondary-foreground: 220 15% 12%;
+    --muted: 200 12% 92%;
+    --muted-foreground: 220 9% 38%;
+    --accent: 174 30% 91%;
+    --accent-foreground: 174 85% 16%;
+    --destructive: 0 84% 50%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 346.8 77.2% 49.8%;
+    --border: 210 12% 85%;
+    --input: 210 12% 85%;
+    --ring: 174 85% 27%;
     --radius: 1rem;
+
+    --glass-tint: 0 0% 100%;
+    --glow: 174 70% 40%;
+    --glow-2: 222 80% 60%;
+    --grain-opacity: 0.05;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 55 100% 50%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 346.8 77.2% 49.8%;
-    --primary-foreground: 355.7 100% 97.3%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 346.8 77.2% 49.8%;
+    --background: 220 12% 7%;
+    --foreground: 40 14% 93%;
+    --card: 220 10% 10%;
+    --card-foreground: 40 14% 93%;
+    --popover: 220 10% 9%;
+    --popover-foreground: 40 14% 93%;
+    --primary: 172 55% 58%;
+    --primary-foreground: 174 85% 8%;
+    --secondary: 220 8% 15%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 220 8% 15%;
+    --muted-foreground: 220 8% 66%;
+    --accent: 174 25% 16%;
+    --accent-foreground: 172 55% 80%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 8% 18%;
+    --input: 220 8% 18%;
+    --ring: 172 55% 58%;
+
+    --glass-tint: 220 10% 12%;
+    --glow: 172 60% 45%;
+    --glow-2: 226 70% 58%;
+    --grain-opacity: 0.07;
   }
+
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        rgb(var(--background-end-rgb))
-      )
-      rgb(var(--background-start-rgb));
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
   }
 }
 
-@font-face {
-  font-family: 'Aquire';
-  src: url('/AquireBold-8Ma60.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+/* ---------- ambient page backdrop ---------- */
+
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
 }
 
-.font-aquire {
-  font-family: 'Aquire', sans-serif;
-}
-
-.gradient-text {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(
-    90deg,
-    hsl(274, 51%, 47%),
-    hsl(158, 79%, 45%),
-    hsl(229, 59%, 51%)
+/* fine dot grid, fading out towards the fold */
+.ambient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    hsl(var(--foreground) / 0.1) 1px,
+    transparent 1px
   );
-  background-size: 400% 100%;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: colorTransition 8s infinite;
-  text-align: center;
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 90% 55% at 50% 0%, black 15%, transparent 75%);
 }
 
-.Typewriter__cursor {
-  font-size: 0.9em !important;
-  color: hsl(var(--muted-foreground)) !important;
+/* aurora: low-alpha glows spread across the whole viewport */
+.ambient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 55% 40% at 15% -8%,
+      hsl(var(--glow) / 0.2),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 45% 32% at 88% -4%,
+      hsl(var(--glow-2) / 0.14),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 35% at 100% 55%,
+      hsl(var(--glow) / 0.09),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at -5% 85%,
+      hsl(var(--glow-2) / 0.08),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 35% at 50% 108%,
+      hsl(var(--glow) / 0.12),
+      transparent 72%
+    );
 }
-@keyframes fadeIn {
+
+/* film grain so flat areas never read as dead space */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: -9;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+/* ---------- liquid glass ----------
+   Layer stack (see components/liquid-glass.tsx):
+   .glass-refraction  backdrop refraction via SVG displacement map
+                      (Chromium), frosted blur fallback elsewhere
+   .glass-tint        translucent material color
+   .glass-shine       specular rim light + diagonal sheen reflection */
+
+.liquid-glass {
+  box-shadow:
+    0 8px 24px hsl(220 15% 10% / 0.14),
+    0 2px 6px hsl(220 15% 10% / 0.08);
+}
+
+.glass-refraction {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  animation: glass-in 0.7s ease-out;
+}
+
+@keyframes glass-in {
   from {
     opacity: 0;
   }
@@ -193,28 +242,106 @@
   }
 }
 
-.visible {
-  animation: fadeIn 1s ease-in-out;
-  opacity: 1;
+@media (prefers-reduced-motion: reduce) {
+  .glass-refraction {
+    animation: none;
+  }
 }
 
-.hidden {
-  opacity: 0;
+.glass-tint {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--glass-tint) / 0.5),
+    hsl(var(--glass-tint) / 0.22)
+  );
 }
-@keyframes colorTransition {
-  0% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 100% 50%;
-  }
-  50% {
-    background-position: 0% 50%;
-  }
-  75% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+
+.glass-shine {
+  /* rim catches the light on the top-left, softer on the bottom-right */
+  box-shadow:
+    inset 2px 2px 1px -1.5px hsl(0 0% 100% / 0.95),
+    inset -2px -2px 1px -1.5px hsl(0 0% 100% / 0.65),
+    inset 0 0 0 1px hsl(0 0% 100% / 0.18);
+  /* diagonal streak, the "reflection" you see on glass over content */
+  background: linear-gradient(
+    115deg,
+    transparent 28%,
+    hsl(0 0% 100% / 0.16) 42%,
+    hsl(0 0% 100% / 0.04) 52%,
+    transparent 64%
+  );
+}
+
+.dark .liquid-glass {
+  box-shadow:
+    0 8px 28px hsl(220 15% 3% / 0.6),
+    0 2px 6px hsl(220 15% 3% / 0.4);
+}
+
+.dark .glass-tint {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--glass-tint) / 0.6),
+    hsl(var(--glass-tint) / 0.3)
+  );
+}
+
+.dark .glass-shine {
+  box-shadow:
+    inset 2px 2px 1px -1.5px hsl(0 0% 100% / 0.4),
+    inset -2px -2px 1px -1.5px hsl(0 0% 100% / 0.16),
+    inset 0 0 0 1px hsl(0 0% 100% / 0.08);
+  background: linear-gradient(
+    115deg,
+    transparent 28%,
+    hsl(0 0% 100% / 0.09) 42%,
+    hsl(0 0% 100% / 0.02) 52%,
+    transparent 64%
+  );
+}
+
+/* ---------- misc ---------- */
+
+.font-aquire {
+  font-family: 'Aquire', var(--font-sans);
+}
+
+@font-face {
+  font-family: 'Aquire';
+  src: url('/AquireBold-8Ma60.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    120deg,
+    hsl(var(--foreground)) 40%,
+    hsl(var(--foreground) / 0.7)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /* tight tracking lets the last glyph's ink spill past the inline box,
+     where background-clip:text stops painting it; pad the paint area */
+  padding-right: 0.08em;
+  margin-right: -0.08em;
+}
+
+.mask-fade-x {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation-play-state: paused;
   }
 }

@@ -1,14 +1,29 @@
 {
   "name": "Alvin Joy",
-  "bio": "I'm Alvin Joy, a JavaScript developer with a love for creating interactive applications. I've worked on Discord bots using discord.js and am now expanding my skills into Web and App development. I'm always eager to learn and improve, and I'm excited about the future of technology. Outside of coding, I enjoy exploring new tech and staying connected with the developer community.",
+  "tagline": "I build interactive things, end to end.",
+  "location": "Kerala, India",
+  "birthYear": 2004,
+  "roles": [
+    "Full-stack Developer",
+    "Flutter Developer",
+    "Open Source Contributor",
+    "Discord Bot Developer",
+    "ML Enthusiast"
+  ],
+  "bio": "I'm Alvin Joy, a full-stack developer from Kerala who loves building interactive applications. I started with Discord bots in discord.js, and these days I build with Flutter and Go at Zimble Systems, with side quests into the web and machine learning. I'm always eager to learn, and I care a lot about open source.",
+  "about": "I'm a {age} year old who likes software that feels alive: realtime chat, social feeds, things that respond the moment you touch them. That curiosity has turned into shipped projects, merged pull requests in tools I use every day, and a habit of rebuilding my own corner of the internet a little too often. When I'm not coding, I'm exploring new tech and keeping up with the developer community.",
+  "work": {
+    "company": "Zimble Systems",
+    "link": "https://zimblesystems.com"
+  },
   "contacts": {
     "github": {
       "link": "https://github.com/alvinsjoy",
       "username": "alvinsjoy"
     },
     "email": {
-      "link": "mailto:mdl22cs029@mec.ac.in",
-      "username": "mdl22cs029@mec.ac.in"
+      "link": "mailto:hi@alvin.is-a.dev",
+      "username": "hi@alvin.is-a.dev"
     },
     "twitter": {
       "link": "https://x.com/_alvinjoy_",

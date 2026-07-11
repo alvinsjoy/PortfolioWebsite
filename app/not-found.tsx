@@ -1,42 +1,30 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { FaHome } from 'react-icons/fa';
+import { LuArrowLeft } from 'react-icons/lu';
+import BlurFade from '@/components/blur-fade';
 import { Button } from '@/components/ui/button';
-import Footer from '@/components/footer';
 
 export default function NotFound() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [animationFinished, setAnimationFinished] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const timeoutId = setTimeout(() => {
-      setAnimationFinished(true);
-    }, 2000);
-    return () => clearTimeout(timeoutId);
-  }, []);
-
   return (
-    <div
-      className={`bg-linear-to-r from-[#d066c9] via-gray-200 to-[#bf8343] text-black dark:from-[#3f203d] dark:via-black dark:to-[#2f2010] dark:text-white min-h-screen flex flex-col justify-center items-center ${
-        isVisible || !animationFinished ? 'visible' : 'hidden'
-      }`}
-    >
-      <h1 className="gradient-text text-transparent bg-clip-text text-center">
-        404 | Page Not Found
-      </h1>
-      <Link href="/">
-        <Button
-          variant="outline"
-          className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-        >
-          <FaHome />
-          &nbsp;Go Home
-        </Button>
-      </Link>
-      <Footer />
+    <div className="container flex min-h-[55vh] flex-col items-center justify-center text-center">
+      <BlurFade>
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-primary">
+          Error 404
+        </p>
+        <h1 className="mt-4 text-6xl font-semibold tracking-tighter sm:text-8xl">
+          <em className="font-serif font-normal">Lost</em> in space
+        </h1>
+        <p className="mx-auto mt-5 max-w-sm text-muted-foreground">
+          This page doesn&apos;t exist, or it moved while nobody was looking.
+        </p>
+        <div className="mt-8">
+          <Button asChild>
+            <Link href="/">
+              <LuArrowLeft className="size-4" />
+              Back home
+            </Link>
+          </Button>
+        </div>
+      </BlurFade>
     </div>
   );
 }

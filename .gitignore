@@ -12,6 +12,7 @@ Location.tsx
 
 # next.js
 /.next/
+/.next-build/
 /out/
 
 # production

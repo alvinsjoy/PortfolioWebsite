@@ -1,108 +1,60 @@
 'use client';
 
-import Link from 'next/link';
+import type { IconType } from 'react-icons';
 import {
+  FaEnvelope,
+  FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaXTwitter,
-  FaGithub,
   FaRedditAlien,
-  FaEnvelope,
+  FaXTwitter,
 } from 'react-icons/fa6';
-import { Button } from '@/components/ui/button';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import { cn } from '@/lib/utils';
 import jsonData from '@/data/profile.json';
 
-const {
-  contacts: { github, email, twitter, instagram, reddit, linkedin },
-} = jsonData;
+const { contacts } = jsonData;
 
-export default function SocialLinks() {
+const items: { label: string; icon: IconType; link: string }[] = [
+  { label: `GitHub · ${contacts.github.username}`, icon: FaGithub, link: contacts.github.link },
+  { label: contacts.email.username, icon: FaEnvelope, link: contacts.email.link },
+  { label: `Twitter · @${contacts.twitter.username}`, icon: FaXTwitter, link: contacts.twitter.link },
+  { label: `LinkedIn · ${contacts.linkedin.username}`, icon: FaLinkedin, link: contacts.linkedin.link },
+  { label: `Instagram · @${contacts.instagram.username}`, icon: FaInstagram, link: contacts.instagram.link },
+  { label: `Reddit · u/${contacts.reddit.username}`, icon: FaRedditAlien, link: contacts.reddit.link },
+];
+
+export default function SocialLinks({ compact = false }: { compact?: boolean }) {
   return (
-    <ul className="text-center flex justify-center gap-4 items-center">
-      <li>
-        <Link href={github.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-          >
-            <FaGithub
-              className="w-8 h-8 sm:w-6 sm:h-6"
-              title={`GitHub: ${github.username}`}
-            />
-          </Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={email.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-          >
-            <FaEnvelope
-              className="w-8 h-8 sm:w-6 sm:h-6"
-              title={`Email: ${email.username}`}
-            />
-          </Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={twitter.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-          >
-            <FaXTwitter
-              className="w-8 h-8 sm:w-6 sm:h-6"
-              title={`Twitter: ${twitter.username}`}
-            />
-          </Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={instagram.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-          >
-            <FaInstagram
-              className="w-8 h-8 sm:w-6 sm:h-6"
-              title={`Instagram: ${instagram.username}`}
-            />
-          </Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={reddit.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-          >
-            <FaRedditAlien
-              className="w-8 h-8 sm:w-6 sm:h-6"
-              title={`Reddit: ${reddit.username}`}
-            />
-          </Button>
-        </Link>
-      </li>
-      <li>
-        <Link href={linkedin.link} target="_blank" rel="noopener noreferrer">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-[#111111] dark:text-[#AEB2B6] hover:text-foreground dark:hover:text-foreground"
-          >
-            <FaLinkedin
-              title={`LinkedIn: ${linkedin.username}`}
-              className="w-8 h-8 sm:w-6 sm:h-6"
-            />
-          </Button>
-        </Link>
-      </li>
-    </ul>
+    <TooltipProvider delayDuration={150}>
+      <ul className={cn('flex items-center', compact ? 'gap-1' : 'gap-2')}>
+        {items.map(({ label, icon: Icon, link }) => (
+          <li key={label}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={cn(
+                    'flex items-center justify-center rounded-full text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-foreground',
+                    compact ? 'size-8' : 'size-10',
+                  )}
+                >
+                  <Icon className={compact ? 'size-4' : 'size-5'} />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>{label}</TooltipContent>
+            </Tooltip>
+          </li>
+        ))}
+      </ul>
+    </TooltipProvider>
   );
 }

@@ -1,0 +1,63 @@
+import type { IconType } from 'react-icons';
+import {
+  SiC,
+  SiOpenjdk,
+  SiPython,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiSupabase,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiTypescript,
+  SiNodedotjs,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiPrisma,
+  SiSocketdotio,
+  SiFastapi,
+  SiDart,
+  SiFlutter,
+  SiGo,
+  SiGit,
+  SiGithub,
+  SiGithubactions,
+  SiMarkdown,
+  SiVercel,
+} from 'react-icons/si';
+
+export type Skill = {
+  icon: IconType;
+  name: string;
+};
+
+export const skills: Skill[] = [
+  { icon: SiTypescript, name: 'TypeScript' },
+  { icon: SiJavascript, name: 'JavaScript' },
+  { icon: SiReact, name: 'React' },
+  { icon: SiNextdotjs, name: 'Next.js' },
+  { icon: SiNodedotjs, name: 'Node.js' },
+  { icon: SiTailwindcss, name: 'Tailwind CSS' },
+  { icon: SiHtml5, name: 'HTML' },
+  { icon: SiCss, name: 'CSS' },
+  { icon: SiFlutter, name: 'Flutter' },
+  { icon: SiGo, name: 'Go' },
+  { icon: SiDart, name: 'Dart' },
+  { icon: SiPython, name: 'Python' },
+  { icon: SiC, name: 'C' },
+  { icon: SiOpenjdk, name: 'Java' },
+  { icon: SiFastapi, name: 'FastAPI' },
+  { icon: SiPrisma, name: 'Prisma' },
+  { icon: SiSocketdotio, name: 'Socket.io' },
+  { icon: SiSupabase, name: 'Supabase' },
+  { icon: SiPostgresql, name: 'PostgreSQL' },
+  { icon: SiMysql, name: 'MySQL' },
+  { icon: SiMongodb, name: 'MongoDB' },
+  { icon: SiGit, name: 'Git' },
+  { icon: SiGithub, name: 'GitHub' },
+  { icon: SiGithubactions, name: 'GitHub Actions' },
+  { icon: SiVercel, name: 'Vercel' },
+  { icon: SiMarkdown, name: 'Markdown' },
+];
