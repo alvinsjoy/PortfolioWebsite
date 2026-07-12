@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa6';
 import { LuArrowRight, LuMapPin } from 'react-icons/lu';
 import BlurFade from '@/components/blur-fade';
-import HeroRays from '@/components/hero-rays';
+import DitherBackground from '@/components/dither-background';
 import Marquee from '@/components/marquee';
 import ProjectCard from '@/components/project-card';
 import RotatingText from '@/components/rotating-text';
@@ -20,8 +20,8 @@ export default function HomePage() {
 
   return (
     <div className="container relative">
-      {/* dithered light rays behind the hero, tracking the pointer */}
-      <HeroRays className="absolute -top-32 left-1/2 -z-10 h-[620px] w-screen -translate-x-1/2" />
+      {/* React Bits Dither waves behind the hero, tracking the pointer */}
+      <DitherBackground className="absolute -top-32 left-1/2 -z-10 h-155 w-screen -translate-x-1/2" />
 
       {/* ---------- hero ---------- */}
       <section className="flex items-center justify-between gap-16 py-14 sm:py-20">

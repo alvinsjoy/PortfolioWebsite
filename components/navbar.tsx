@@ -57,7 +57,7 @@ export default function Navbar() {
                     {active && (
                       <motion.span
                         layoutId="nav-pill"
-                        className="absolute inset-0 rounded-full bg-foreground/[0.08] shadow-[inset_0_1px_0_hsl(0_0%_100%/0.25)] dark:bg-foreground/10"
+                        className="absolute inset-0 rounded-full bg-foreground/8 shadow-[inset_0_1px_0_hsl(0_0%_100%/0.25)] dark:bg-foreground/10"
                         transition={{
                           type: 'spring',
                           bounce: 0.22,

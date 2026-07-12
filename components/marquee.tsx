@@ -25,7 +25,7 @@ export default function Marquee({
     >
       <div
         className={cn(
-          'flex w-max shrink-0 items-center gap-[var(--marquee-gap)] pr-[var(--marquee-gap)] group-hover:[animation-play-state:paused]',
+          'flex w-max shrink-0 items-center gap-(--marquee-gap) pr-(--marquee-gap) group-hover:[animation-play-state:paused]',
           reverse ? 'animate-marquee-reverse' : 'animate-marquee',
         )}
       >

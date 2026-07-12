@@ -141,6 +141,8 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     text-rendering: optimizeLegibility;
+    /* full-bleed layers (hero rays) must not create a horizontal scrollbar */
+    overflow-x: clip;
   }
 
   ::selection {
