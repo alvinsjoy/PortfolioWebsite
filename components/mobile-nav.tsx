@@ -75,10 +75,7 @@ export function MobileNavDrawer() {
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-center gap-3">
               <Avatar className="size-11 ring-1 ring-border">
-                <AvatarImage
-                  src="https://github.com/alvinsjoy.png"
-                  alt={profile.name}
-                />
+                <AvatarImage src={profile.avatar} alt={profile.name} />
                 <AvatarFallback className="text-xs">AJ</AvatarFallback>
               </Avatar>
               <span className="flex flex-col">
@@ -174,7 +171,7 @@ export function MobileNavDrawer() {
                   className="rounded-xl px-3 text-base"
                 >
                   <a
-                    href="https://aj.is-a.dev"
+                    href={profile.contacts.links.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={close}
@@ -182,7 +179,7 @@ export function MobileNavDrawer() {
                     <LuArrowUpRight className="size-4 text-muted-foreground" />
                     <span>Links</span>
                     <span className="ml-auto font-mono text-xs text-muted-foreground">
-                      aj.is-a.dev
+                      {profile.contacts.links.username}
                     </span>
                   </a>
                 </SidebarMenuButton>

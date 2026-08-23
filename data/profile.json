@@ -1,6 +1,7 @@
 {
   "name": "Alvin Joy",
   "tagline": "I build interactive things, end to end.",
+  "avatar": "https://avatars.githubusercontent.com/alvinsjoy",
   "location": "Kerala, India",
   "birthYear": 2004,
   "roles": [
@@ -14,7 +15,7 @@
   "about": "I'm a {age} year old who likes software that feels alive: realtime chat, social feeds, things that respond the moment you touch them. That curiosity has turned into shipped projects, merged pull requests in tools I use every day, and a habit of rebuilding my own corner of the internet a little too often. When I'm not coding, I'm exploring new tech and keeping up with the developer community.",
   "work": {
     "company": "Zimble Systems",
-    "link": "https://zimblesystems.com"
+    "link": "https://zimble.tech"
   },
   "contacts": {
     "github": {
@@ -40,6 +41,10 @@
     "linkedin": {
       "link": "https://linkedin.com/in/alvinsjoy",
       "username": "alvinsjoy"
+    },
+    "links": {
+      "link": "https://aj.is-a.dev",
+      "username": "aj.is-a.dev"
     }
   }
 }

@@ -115,7 +115,7 @@ export default function HomePage() {
             />
             <div className="group relative rotate-3 rounded-3xl border border-border/70 bg-card p-2.5 shadow-xl transition-transform duration-500 ease-out hover:rotate-0">
               <Image
-                src="https://avatars.githubusercontent.com/alvinsjoy"
+                src={profile.avatar}
                 alt="Alvin Joy"
                 width={280}
                 height={280}

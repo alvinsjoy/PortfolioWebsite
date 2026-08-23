@@ -45,10 +45,7 @@ export default function Navbar() {
               className="relative flex items-center gap-2 transition-transform before:absolute before:inset-x-0 before:-inset-y-1.5 before:content-[''] hover:scale-105 active:scale-95 md:mr-1"
             >
               <Avatar className="size-8 ring-1 ring-border">
-                <AvatarImage
-                  src="https://github.com/alvinsjoy.png"
-                  alt="Alvin Joy"
-                />
+                <AvatarImage src={profile.avatar} alt={profile.name} />
                 <AvatarFallback className="text-xs">AJ</AvatarFallback>
               </Avatar>
               {/* the name carries the pill below md, where the links are
@@ -96,7 +93,7 @@ export default function Navbar() {
               })}
               <li>
                 <a
-                  href="https://aj.is-a.dev"
+                  href={profile.contacts.links.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative flex items-center gap-0.5 rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors duration-300 before:absolute before:inset-x-0 before:-inset-y-1.5 before:content-[''] hover:text-foreground sm:px-3.5"
