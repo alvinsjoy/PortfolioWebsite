@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa6';
+import { GiPalmTree } from 'react-icons/gi';
 import { LuArrowRight, LuArrowUpRight, LuBuilding2 } from 'react-icons/lu';
 import BlurFade from '@/components/blur-fade';
 import LiveClock from '@/components/live-clock';
@@ -31,6 +32,7 @@ export default function AboutPage() {
     <div className="container pb-14">
       <BlurFade>
         <SectionHeading
+          as="h1"
           eyebrow="About"
           title={
             <>
@@ -46,17 +48,11 @@ export default function AboutPage() {
         <BlurFade delay={0.05} className="md:col-span-2">
           <SpotlightCard className="h-full">
             <div className="flex h-full flex-col p-7">
-              <h3 className="text-lg font-semibold tracking-tight">
+              <h2 className="text-lg font-semibold tracking-tight">
                 Hi again, I&apos;m {profile.name}.
-              </h3>
+              </h2>
               <p className="mt-3 leading-relaxed text-muted-foreground">
                 {about}
-              </p>
-              <p className="mt-3 leading-relaxed text-muted-foreground">
-                My path so far: Discord bots, then web apps, then full-stack
-                platforms, and these days Flutter apps backed by Go services.
-                The constant is that I like building things people actually
-                touch.
               </p>
               <div className="mt-auto pt-5">
                 <Button asChild variant="outline" size="sm">
@@ -77,15 +73,18 @@ export default function AboutPage() {
               <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                 Based in
               </p>
-              <div className="flex flex-1 flex-col justify-center gap-4 py-6">
-                <p className="flex items-center gap-2 text-2xl font-semibold tracking-tight">
-                  <span className="relative flex size-2.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-50" />
-                    <span className="relative inline-flex size-2.5 rounded-full bg-primary" />
-                  </span>
-                  {profile.location}
-                </p>
-                <LiveClock withDate />
+              <div className="flex flex-1 items-center justify-between gap-4 py-6">
+                <div className="flex flex-col gap-4">
+                  <p className="flex items-center gap-2 text-2xl font-semibold tracking-tight">
+                    <span className="relative flex size-2.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-50" />
+                      <span className="relative inline-flex size-2.5 rounded-full bg-primary" />
+                    </span>
+                    {profile.location}
+                  </p>
+                  <LiveClock withDate />
+                </div>
+                <GiPalmTree className="size-16 shrink-0 text-primary" />
               </div>
             </div>
           </SpotlightCard>
@@ -102,7 +101,7 @@ export default function AboutPage() {
                 <span className="flex size-11 items-center justify-center rounded-xl border border-border/70 bg-background">
                   <LuBuilding2 className="size-5 text-primary" />
                 </span>
-                <h3 className="text-xl font-semibold tracking-tight">
+                <h2 className="text-xl font-semibold tracking-tight">
                   <a
                     href={profile.work.link}
                     target="_blank"
@@ -112,7 +111,7 @@ export default function AboutPage() {
                     {profile.work.company}
                     <LuArrowUpRight className="size-4" />
                   </a>
-                </h3>
+                </h2>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 Working as a software engineer, building with Flutter and Go:

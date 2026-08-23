@@ -1,5 +1,10 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google';
+import {
+  Geist,
+  Geist_Mono,
+  Instrument_Serif,
+  Space_Grotesk,
+} from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from '@/components/providers';
@@ -22,6 +27,12 @@ const instrumentSerif = Instrument_Serif({
   weight: '400',
   style: ['normal', 'italic'],
   variable: '--font-instrument-serif',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-space-grotesk',
 });
 
 const description =
@@ -90,13 +101,13 @@ export default function RootLayout({
         <script defer src="/oneko.js" />
       </head>
       <body
-        className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable}`}
+        className={`${geist.variable} ${geistMono.variable} ${instrumentSerif.variable} ${spaceGrotesk.variable}`}
       >
         <Providers>
           <div aria-hidden="true" className="ambient" />
           <div aria-hidden="true" className="grain" />
           <Navbar />
-          <main className="pt-32">{children}</main>
+          <main className="pt-24 sm:pt-32">{children}</main>
           <Footer />
         </Providers>
         <Analytics />

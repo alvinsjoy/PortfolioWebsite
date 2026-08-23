@@ -25,6 +25,7 @@ export default function JourneyPage() {
     <div className="container pb-14">
       <BlurFade>
         <SectionHeading
+          as="h1"
           eyebrow="Journey"
           title={
             <>

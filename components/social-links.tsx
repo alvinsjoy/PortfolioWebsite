@@ -44,7 +44,9 @@ export default function SocialLinks({ compact = false }: { compact?: boolean }) 
                   aria-label={label}
                   className={cn(
                     'flex items-center justify-center rounded-full text-muted-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-foreground',
-                    compact ? 'size-8' : 'size-10',
+                    // the footer's compact icons are 32px on pointer devices;
+                    // on phones they get a 40px target instead
+                    compact ? 'size-10 sm:size-8' : 'size-10',
                   )}
                 >
                   <Icon className={compact ? 'size-4' : 'size-5'} />

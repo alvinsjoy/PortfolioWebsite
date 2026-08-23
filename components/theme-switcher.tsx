@@ -11,7 +11,7 @@ export default function ThemeSwitcher() {
     <Button
       variant="ghost"
       size="icon"
-      className="size-8 rounded-full text-muted-foreground hover:text-foreground"
+      className="relative size-8 rounded-full text-muted-foreground before:absolute before:inset-x-0 before:-inset-y-1.5 before:content-[''] hover:text-foreground"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
       <LuSun className="absolute size-[1.1rem] rotate-0 scale-100 transition-transform duration-500 ease-in-out dark:-rotate-90 dark:scale-0" />

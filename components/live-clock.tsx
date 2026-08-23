@@ -22,7 +22,14 @@ function Digit({ char }: { char: string }) {
   );
 }
 
-export default function LiveClock({ withDate = false }: { withDate?: boolean }) {
+export default function LiveClock({
+  withDate = false,
+  /* the mobile drawer needs the same clock at a footer-appropriate size */
+  compact = false,
+}: {
+  withDate?: boolean;
+  compact?: boolean;
+}) {
   const [time, setTime] = useState<string | null>(null);
   const [date, setDate] = useState<string | null>(null);
 
@@ -52,14 +59,20 @@ export default function LiveClock({ withDate = false }: { withDate?: boolean }) 
   }, []);
 
   return (
-    <span className="inline-flex flex-col gap-2">
+    <span className={compact ? 'inline-flex flex-col gap-1' : 'inline-flex flex-col gap-2'}>
       {withDate && (
         <span className="text-sm text-muted-foreground">
           {date ?? ' '}
         </span>
       )}
       <span className="inline-flex items-baseline gap-2">
-      <span className="font-mono text-3xl font-medium tabular-nums leading-none">
+      <span
+        className={
+          compact
+            ? 'font-mono text-lg font-medium tabular-nums leading-none'
+            : 'font-mono text-3xl font-medium tabular-nums leading-none'
+        }
+      >
         {time === null ? (
           <span className="opacity-40">--:--:--</span>
         ) : (

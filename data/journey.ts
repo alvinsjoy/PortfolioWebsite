@@ -3,7 +3,7 @@ export type JourneyEntry = {
   org: string;
   orgLink?: string;
   period: string;
-  description: string;
+  description?: string;
   tags?: string[];
 };
 
@@ -12,10 +12,16 @@ export const work: JourneyEntry[] = [
     title: 'Software Engineer',
     org: 'Zimble Systems',
     orgLink: 'https://zimblesystems.com',
-    period: 'Since 2026',
+    period: 'Since Jun 2026',
     description:
-      'Building products with Flutter and Go: mobile apps, the backend services behind them and everything between.',
+      'Building products with Flutter and Go: desktop apps, the services behind them and everything between.',
     tags: ['Flutter', 'Go'],
+  },
+  {
+    title: 'Software Engineer Intern',
+    org: 'Zimble Systems',
+    orgLink: 'https://zimblesystems.com',
+    period: 'Dec 2025 to May 2026',
   },
 ];
 

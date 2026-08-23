@@ -304,16 +304,9 @@
 
 /* ---------- misc ---------- */
 
-.font-aquire {
-  font-family: 'Aquire', var(--font-sans);
-}
-
-@font-face {
-  font-family: 'Aquire';
-  src: url('/AquireBold-8Ma60.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.font-wordmark {
+  font-family: var(--font-space-grotesk), var(--font-geist), ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 .text-gradient {
@@ -346,4 +339,21 @@
   .animate-marquee-reverse {
     animation-play-state: paused;
   }
+}
+
+/* ---------- sidebar (mobile drawer) ----------
+   shadcn ships its own grey/blue sidebar palette; these map onto the
+   tokens this site already uses instead, so the drawer inherits the
+   teal system and both themes for free. @theme inline resolves the
+   var() at use-site, so no .dark override is needed here. */
+
+@theme inline {
+  --color-sidebar: hsl(var(--card));
+  --color-sidebar-foreground: hsl(var(--foreground));
+  --color-sidebar-primary: hsl(var(--primary));
+  --color-sidebar-primary-foreground: hsl(var(--primary-foreground));
+  --color-sidebar-accent: hsl(var(--accent));
+  --color-sidebar-accent-foreground: hsl(var(--accent-foreground));
+  --color-sidebar-border: hsl(var(--border));
+  --color-sidebar-ring: hsl(var(--ring));
 }

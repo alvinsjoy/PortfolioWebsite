@@ -7,7 +7,10 @@ export default function Footer() {
     <footer className="mt-24 border-t border-border/60">
       <div className="container flex flex-col items-center gap-6 py-10 sm:flex-row sm:justify-between">
         <div className="flex flex-col items-center gap-1 sm:items-start">
-          <Link href="/" className="font-aquire text-lg tracking-wide">
+          <Link
+            href="/"
+            className="font-wordmark text-lg font-semibold tracking-wide"
+          >
             Alvin Joy
           </Link>
           <p className="flex items-center gap-1.5 whitespace-nowrap text-sm text-muted-foreground">

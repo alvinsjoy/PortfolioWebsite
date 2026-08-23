@@ -14,7 +14,7 @@ export default function Timeline({ entries }: { entries: JourneyEntry[] }) {
           {/* timeline dot */}
           <span
             aria-hidden="true"
-            className="absolute -left-[5px] top-1.5 size-[9px] rounded-full bg-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.15)]"
+            className="absolute -left-1.25 top-1.5 size-2.25 rounded-full bg-primary shadow-[0_0_0_4px_hsl(var(--primary)/0.15)]"
           />
           <BlurFade delay={i * 0.08}>
             <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -38,9 +38,11 @@ export default function Timeline({ entries }: { entries: JourneyEntry[] }) {
                 entry.org
               )}
             </p>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              {entry.description}
-            </p>
+            {entry.description && (
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                {entry.description}
+              </p>
+            )}
             {entry.tags && (
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {entry.tags.map((tag) => (
