@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import {
   LuArrowUpRight,
   LuBriefcase,
-  LuCircleDot,
   LuGitPullRequestArrow,
   LuGraduationCap,
 } from 'react-icons/lu';
 import BlurFade from '@/components/blur-fade';
+import ContributionCard from '@/components/contribution-card';
 import SectionHeading from '@/components/section-heading';
-import SpotlightCard from '@/components/spotlight-card';
 import Timeline from '@/components/timeline';
 import { education, work } from '@/data/journey';
 import { contributions } from '@/data/oss';
 import profile from '@/data/profile.json';
+import { getContributionMetrics } from '@/lib/github';
 
 export const metadata: Metadata = {
   title: 'Journey',
@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     'Where I have worked and studied, plus my open source contributions. The journey of Alvin Joy.',
 };
 
-export default function JourneyPage() {
+export default async function JourneyPage() {
+  const metrics = await getContributionMetrics(
+    contributions,
+    profile.contacts.github.username,
+  );
+
   return (
     <div className="container pb-14">
       <BlurFade>
@@ -80,35 +85,10 @@ export default function JourneyPage() {
               delay={Math.min(i * 0.04, 0.3)}
               className="h-full"
             >
-              <SpotlightCard className="h-full rounded-xl">
-                <a
-                  href={contribution.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/link flex h-full items-start gap-3 p-4"
-                >
-                  {contribution.type === 'pr' ? (
-                    <LuGitPullRequestArrow
-                      title="Pull request"
-                      className="mt-0.5 size-4 shrink-0 text-primary"
-                    />
-                  ) : (
-                    <LuCircleDot
-                      title="Issue"
-                      className="mt-0.5 size-4 shrink-0 text-muted-foreground"
-                    />
-                  )}
-                  <span className="flex-1">
-                    <span className="block font-mono text-xs text-muted-foreground">
-                      {contribution.repo}
-                    </span>
-                    <span className="mt-1 block text-sm font-medium leading-snug">
-                      {contribution.title}
-                    </span>
-                  </span>
-                  <LuArrowUpRight className="mt-0.5 size-4 shrink-0 text-muted-foreground transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 group-hover/link:text-foreground" />
-                </a>
-              </SpotlightCard>
+              <ContributionCard
+                contribution={contribution}
+                metrics={metrics.get(contribution.url)}
+              />
             </BlurFade>
           ))}
         </div>

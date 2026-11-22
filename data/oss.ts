@@ -44,10 +44,10 @@ export const contributions: Contribution[] = [
     url: 'https://github.com/zen-browser/desktop/issues/7798',
   },
   {
-    repo: 'ente-io/ente',
+    repo: 'ente/ente',
     title: 'Remove hex for LinkedIn icon in Auth',
     type: 'pr',
-    url: 'https://github.com/ente-io/ente/pull/5727',
+    url: 'https://github.com/ente/ente/pull/5727',
   },
   {
     repo: 'zaidmukaddam/scira',
